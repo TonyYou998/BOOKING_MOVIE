@@ -1,0 +1,68 @@
+.app {
+  //   background-image: url(../../img/backapp.jpg);
+  background-position: center;
+  background-size: cover;
+  color: white;
+  padding: 120px 0;
+  .app__text {
+    width: 80%;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    h5 {
+      font-size: 2rem;
+      line-height: 3.4rem;
+    }
+    p {
+      margin-top: 20px;
+      font-size: 1.1rem;
+    }
+    button {
+      display: block;
+
+      border: none;
+      outline: none;
+      background-color: #fb4226;
+      padding: 10px;
+      border-radius: 4px;
+      margin-top: 25px;
+      margin-bottom: 10px;
+      a {
+        color: white;
+        font-size: 1.2rem;
+        text-decoration: none;
+      }
+    }
+    span {
+      a {
+        color: white;
+        text-decoration: underline;
+      }
+    }
+  }
+  .app__mobile {
+    .mobile__case {
+      position: relative;
+      img {
+        display: block;
+        height: 450px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+      .mobile__iphone img {
+        height: 457px;
+      }
+      .mobile__slide {
+        position: absolute;
+        top: 2px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 10%;
+        display: block;
+        width: 207.81px;
+        border-radius: 26px;
+        height: 450px;
+        overflow: hidden;
+      }
+    }
+  }
+}

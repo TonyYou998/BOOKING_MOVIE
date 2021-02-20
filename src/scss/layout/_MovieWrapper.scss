@@ -1,0 +1,36 @@
+.movie__wrapper {
+  .nav-tabs {
+    padding: 100px 0 10px;
+    width: 30% !important;
+    border-bottom: none;
+    border: 0;
+    margin: 0 auto;
+    .nav-link {
+      font-weight: 500;
+      font-size: 20px;
+      color: black;
+      &:hover {
+        font-size: 24px;
+        transition: all 0.4s;
+        border: 0;
+      }
+    }
+    .active {
+      color: #fa5238 !important;
+      border: 0 !important;
+      font-size: 24px;
+    }
+  }
+}
+.title {
+  margin-bottom: 20px;
+  padding: 20px;
+}
+.img {
+  height: 260px;
+  width: 100%;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: #000 !important;
+}

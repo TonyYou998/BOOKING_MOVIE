@@ -1,0 +1,62 @@
+footer {
+  background-color: #222222;
+  .row {
+    .Brand__name {
+      color: white;
+      font-size: 80%;
+      width: 100%;
+    }
+    .li__contents {
+      display: flex;
+      ul {
+        padding: 0;
+        li {
+          list-style: none;
+          font-size: 12px;
+          color: #8f9394;
+        }
+      }
+    }
+    .icon {
+      ul {
+        padding: 0;
+        li {
+          img {
+            background-color: white;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+    .partner {
+      .row {
+        img {
+          width: 30px;
+          height: 30px;
+          padding: 0 4px;
+        }
+      }
+    }
+  }
+  .hrFooter {
+    border-top: 1px solid #4a4a4a;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .zion__logo {
+    width: 80px;
+    height: 30px;
+  }
+  .info {
+    color: #8f9394;
+    font-size: 12px;
+  }
+  .iso {
+    img {
+      width: 130px;
+    }
+  }
+}

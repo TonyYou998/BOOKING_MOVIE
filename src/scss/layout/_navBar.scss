@@ -1,0 +1,83 @@
+.header {
+	padding: 10px 0;
+	background-color: rgba(255, 255, 255, 0.95);
+	font-size: 0.9rem;
+	font-weight: 500;
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+	.header__logo {
+		img {
+			height: 50px;
+			width: 50px;
+			display: block;
+		}
+		padding-left: 20px;
+	}
+	.header__nav {
+		text-align: center;
+		ul {
+			list-style: none;
+			padding-top: 15px;
+			li a {
+				color: black;
+				transition: all ease 0.3s;
+				&:hover {
+					text-decoration: none;
+					color: #fb4226;
+				}
+				margin-right: 15px;
+			}
+		}
+	}
+	.header__login {
+		.nav {
+			.nav-item {
+				a {
+					line-height: 50px;
+					color: #9b9b9b;
+					padding: 0;
+					display: inline;
+				}
+				img {
+					border-radius: 50%;
+					width: 30px;
+					color: #9b9b9b;
+					margin-right: 5px;
+				}
+				margin-right: 10px;
+				padding-right: 10px;
+			}
+			.dropdown {
+				img {
+					width: 15px;
+				}
+				.dropdown-menu.show {
+					a {
+						display: block;
+					}
+					top: 10px !important;
+					left: -20px !important;
+					.dropdown-item {
+						padding-left: 10px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+	background-color: transparent !important;
+}
+
+@media screen and (max-width: 768px) {
+	.header__nav {
+		display: none;
+	}
+	.header__login {
+		max-width: 100%;
+	}
+}
