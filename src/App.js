@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { Route, Switch, withRouter } from "react-router-dom";
-import { routesHome } from "./routes";
+import { routesCheckout, routesHome } from "./routes";
 import Carousel from "./components/Carousel";
 import HomeTemplate from "./containers/HomeTemplate";
+import CheckOutTemplate from "./containers/CheckOutTemplate";
 import { connect } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import DemoHooks from "./HOOKS";
@@ -27,10 +28,29 @@ export default class App extends Component {
       });
     }
   };
+  showLayoutCheckout=(routes)=>{
+    if(routes && routes.length>0) {
+      return routes.map((item,index)=>{
+        return (
+          <CheckOutTemplate
+            key={index}
+            exact={item.exact}
+            path={item.path}
+            Component={item.Component}
+          />
+        )
+      })
+    }
+
+  }
   render() {
     return (
       <BrowserRouter>
-        <Switch>{this.showLayoutHome(routesHome)}</Switch>
+        <Switch>
+          {this.showLayoutHome(routesHome)}
+          {this.showLayoutCheckout(routesCheckout)}
+        </Switch>
+
       </BrowserRouter>
       // <DemoHooks />
       // <BTGameBauCua />

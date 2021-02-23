@@ -9,6 +9,9 @@ import Loader from "../../../components/Loading";
 import ListMovieWrapper from "../../../components/ListMovieWrapper";
 import {actListMovieApi} from "../HomePage/modules/action";
 import {useSelector,useDispatch} from "react-redux";
+import { ListMovieRecommend } from "../../../components/ListMovieRecommend";
+import { Demo } from "../../../components/demo";
+
 // import { Link } from "react-router-dom";
  function DetailMoviePage(props) {
   let {id} = useParams();
@@ -21,7 +24,7 @@ import {useSelector,useDispatch} from "react-redux";
   useEffect(()=>{
   
     props.fetchDetailMovie(id);
-},[]);
+},[id]);
 
 
 const {data,loading}=props;
@@ -35,18 +38,17 @@ return <Loader/>
     return <Info MovieData={data} />;
   };
   const renderListMovie=()=>{
-    return <ListMovieWrapper data={listMovieData}/>
+    return <ListMovieRecommend data={listMovieData}/>
   }
-  const renderDetailMovieShowTime = () => {
-    return <ShowTime  />;
-  };
+ 
  
   return (
     <div>
 
       <div> {renderDetailMovieInfo()}</div>
-      {/* <div>{renderListMovie()}</div> */}
-      {/* <div>{renderDetailMovieShowTime()}</div> */}
+      <div>{renderListMovie()}</div>
+      
+     
       
     </div>
   );

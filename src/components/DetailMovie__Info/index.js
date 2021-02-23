@@ -1,9 +1,8 @@
 import React,{useEffect} from "react";
-// import {actListMovieApi} from "../../containers/HomeTemplate/HomePage/modules/action";
+
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
-// import ListMovieWrapper from "../ListMovieWrapper";
-// import {useSelector,useDispatch} from "react-redux"
+import {Link} from "react-router-dom";
 
 export default function Info(props) {
   const { MovieData } = props;
@@ -23,7 +22,7 @@ export default function Info(props) {
         
         <div
           style={{
-            padding: "200px 0",
+            padding: "100px 0",
             
             width: "60%",
             margin: "0 auto",
@@ -36,7 +35,7 @@ export default function Info(props) {
                 <p style={{color:"rgb(126,154,178)"}}>{MovieData && MovieData.ngayKhoiChieu}</p>
                 <h3 style={{color:"rgb(126,154,178)"}}>{MovieData && MovieData.tenPhim}</h3>
                <p>{MovieData&& MovieData.moTa}</p>
-                <button className="btn btn-success">Mua Vé</button>
+                <Link to={"/checkout"} className="btn btn-success">Mua Vé</Link>
               </div>
             </div>
             <div className="col-4">

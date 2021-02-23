@@ -1,0 +1,28 @@
+.Checkout__wrapper{
+    width: 72%;
+    padding-top:90px;
+    // background-color: black;
+    // height: 1000px;
+    .Checkout__topContent{
+        justify-content: space-between;
+        padding:20px 0;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .lefttitle{
+        padding-left: 40px;
+        display: flex;
+        .contentcinema{
+            .timeNdate{
+            font-size: 12px;
+        }
+        }
+        
+    }
+    .seatmap{
+        width: 80%;
+        margin: 0 auto;
+        padding-left: 40px;
+    }
+
+}

@@ -1,0 +1,16 @@
+.navbar__wrapper{
+    .navbar{
+        height:80px;
+        width: 72%;
+        background-color: white;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.300);
+        position: fixed;
+        z-index: 3;
+        .navbar-collapse{
+            justify-content: space-between;
+            li a{
+                  color: #fb4226 !important;
+            }
+        }
+    }
+}
