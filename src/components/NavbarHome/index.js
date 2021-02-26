@@ -7,12 +7,12 @@ export default function NavbarHome() {
         <div className="row">
           <div className="col-3">
             <div className="header__logo">
-              <a href="#">
+              <Link to="/home">
                 <img
                   src="https://tix.vn/app/assets/img/icons/web-logo.png"
                   alt="web-logo"
                 />
-              </a>
+              </Link>
             </div>
           </div>
           <div className="col-6">
@@ -20,7 +20,7 @@ export default function NavbarHome() {
               <ul>
                 <li>
                   <a href="#carlendar">Lịch Chiếu</a>
-                  <a href="#">Cụm rạp</a>
+                  <a href="#time-table">Cụm rạp</a>
                   <a href="#news">Tin Tức</a>
                   <a href="#app">Ứng Dụng</a>
                 </li>

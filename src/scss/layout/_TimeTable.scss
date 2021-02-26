@@ -1,0 +1,145 @@
+.time-table {
+	background: url("https://tix.vn/app/assets/img/icons/back-news.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	.time {
+		padding-top: 120px;
+		padding-bottom: 60px;
+		display: flex;
+		.nav-tabs {
+			display: flex !important;
+			flex-direction: column;
+			border: 1px solid #ebebec;
+			.nav-item {
+				position: relative;
+				img {
+					display: block;
+					width: 50px;
+					height: 50px;
+					opacity: 0.6;
+				}
+				.nav-link {
+					border: none;
+					padding: 20px;
+				}
+				.nav-link.active img {
+					opacity: 1;
+				}
+				a::after {
+					position: absolute;
+					left: 50%;
+					bottom: 0%;
+					transform: translateX(-50%);
+					content: "";
+					width: 50%;
+					display: block;
+					border-bottom: 1px solid rgba(238, 238, 238, 0.88);
+				}
+			}
+		}
+		.tab-content .lichchieu {
+			display: flex;
+			a {
+				color: black;
+				.lichchieu__diadiem__content {
+					display: flex;
+					.lichchieu__diadiem {
+						margin-left: 10px;
+						h5 {
+							font-size: 1rem;
+							margin: 0;
+							span {
+								color: #8bc541;
+							}
+						}
+						p {
+							color: #949494;
+							margin: 0;
+							font-size: 0.9rem;
+						}
+						.chitiet {
+							color: #fb4226;
+							font-size: 0.9rem;
+						}
+					}
+				}
+			}
+			.tab-content {
+				.lichchieu__detail {
+					padding-bottom: 25px;
+					position: relative;
+					.lichchieu__detail__upper {
+						display: flex;
+						img {
+							display: block;
+							width: 50px;
+							height: 50px;
+						}
+						.lichchieu__detail__upper__text {
+							margin-left: 10px;
+							margin-top: 5px;
+							h5 {
+								font-size: 1rem;
+								margin-bottom: 0;
+								span {
+									background-color: #00ac4d;
+									display: inline-block;
+									width: 30px;
+									text-align: center;
+									border-radius: 5px;
+									color: white;
+									font-size: 0.8rem;
+								}
+								.red {
+									background-color: #fb4226;
+								}
+							}
+							p {
+								color: #9b9b9b;
+								font-size: 0.9rem;
+							}
+						}
+					}
+					h3 {
+						font-size: 1.2rem;
+					}
+					.lichchieu__detail__lower {
+						display: flex;
+						flex-wrap: wrap;
+						p {
+							text-align: center;
+							color: #9b9b9b;
+							font-size: 1rem;
+							span {
+								color: #108f3e;
+								font-size: 1.2rem;
+							}
+							background-color: rgba(246, 246, 246, 0.5);
+							border: 1px solid #e4e4e4;
+							border-radius: 10px;
+							font-weight: 500;
+							width: 140px;
+							padding: 4px;
+							margin-right: 10px;
+						}
+					}
+					&::after {
+						position: absolute;
+						left: 50%;
+						bottom: 10%;
+						transform: translateX(-50%);
+						content: "";
+						width: 80%;
+						display: block;
+						height: 1px;
+						border-bottom: 1px solid rgba(238, 238, 238, 0.88);
+					}
+				}
+				.lichchieu__content {
+					border: 1px solid #ebebec;
+					padding: 20px;
+				}
+			}
+		}
+	}
+}

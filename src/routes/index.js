@@ -8,6 +8,11 @@ const routesHome = [
     path: "/",
     Component: HomePage,
   },
+  {
+    exact:false,
+    path:"/home",
+    Component:HomePage,
+  },
 
   {
     exact: false,

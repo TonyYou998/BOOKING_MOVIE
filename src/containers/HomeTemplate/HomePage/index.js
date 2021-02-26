@@ -6,6 +6,7 @@ import NewsWrapper from "../../../components/NewsWrapper";
 import ListMovieWrapper from "../../../components/ListMovieWrapper";
 import App from "../../../components/app";
 import Footer from "../../../components/footer";
+import TimeTable from "../../../components/TimeTable";
 
 function HomePage(props) {
   useEffect(() => {
@@ -41,11 +42,15 @@ function HomePage(props) {
   const renderFooter = () => {
     return <Footer />;
   };
+  const renderTimeTable=()=>{
+    return <TimeTable/>
+  }
 
   return (
     <div>
       <div>{renderCarousel()}</div>
       <div>{renderListMovieWrapper()}</div>
+      <div>{renderTimeTable()}</div>
       <div>{renderNews()}</div>
       <div>{renderApp()}</div>
       <div>{renderFooter()}</div>
