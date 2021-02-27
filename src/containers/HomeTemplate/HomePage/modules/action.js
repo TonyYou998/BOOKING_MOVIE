@@ -115,9 +115,10 @@ export const actListCinemaShowtimeApi=(id)=>{
     dispatch(actListCinemaShowtimeRequest());
    
     mainAPi
-    .get(`/QuanLyRap/LayThongTinCumRapTheoHeThong?maHeThongRap=${id}`)
+    // .get(`/QuanLyRap/LayThongTinCumRapTheoHeThong?maHeThongRap=${id}`)
+    .get(`/QuanLyRap/LayThongTinLichChieuHeThongRap?maHeThongRap=${id}&maNhom=GP01`)
     .then((result)=>{
-   
+      
       dispatch(actListCinemaShowtimeSuccess(result.data));
 
     })
