@@ -11,7 +11,7 @@ export function ListMovieRecommend(props) {
     };
     const renderListMovie=()=>{
       const { data } = props;
-      console.log(data);
+     
     if (data && data.length > 0) {
       return data.map((movie, index) => {
         return <ListMovie movie={movie} />;

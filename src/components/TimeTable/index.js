@@ -65,24 +65,30 @@ export default function TimeTable(props) {
        
 
     }
+    const renderDateTime=(data)=>{
+
+       return data.map((item,index)=>{
+            
+            return  <p> <span>{item.ngayChieuGioChieu}</span></p>
+        })
+
+    }
     const renderLichChieu=(data)=>{
         if (data && data.length>0){
             return data.map((item,index)=>{
+                
                 return (
-                    <div class="lichchieu__detail">
+                    <Link to={`/detail/${item.maPhim}`} class="lichchieu__detail">
                         <div class="lichchieu__detail__upper">
-                                                        <img src="https://s3img.vcdn.vn/123phim/2017/06/coco-14967202410118.jpg"
-                                                            alt="coco-14967202410118" />
-                                                        <div class="lichchieu__detail__upper__text">
-                                                            <h5><span>P</span> CoCo</h5>
-                                                            <p>109 phút - TIX 9.4 - IMDB 8.7</p>
-                                                        </div>
-                                                    </div>
+                            <img src={item.hinhAnh} />
+                            <div class="lichchieu__detail__upper__text">
+                                    <h5><span>P</span>{item.tenPhim}</h5>
+                                    <p>109 phút - TIX 9.4 - IMDB 8.7</p>
+                            </div>
+                        </div>
                         <h3>2D Digital</h3>
-                        <div class="lichchieu__detail__lower">
-                                                        <p><span>14:00</span> ~ 15:49</p>
-                                                    </div>
-                    </div>
+                        
+                    </Link>
                 )
 
             })
@@ -99,7 +105,7 @@ export default function TimeTable(props) {
                
                 return (
                     <div className="tab-pane fade " id={item.maCumRap} role="tabpanel" >
-                            <div className="lichchieu__content">
+                            <div className="lichchieu__content b4__scroll" >
                                 {renderLichChieu(item.danhSachPhim)}
                             </div>
                     </div>
@@ -119,7 +125,7 @@ export default function TimeTable(props) {
                  
                          <div className="tab-pane fade " id={item.biDanh} role="tabpanel"> 
                             <div className="lichchieu">
-                                <ul  className="nav nav-tabs" id="bhd__cinemasTab" role="tablist" style={{overflow:"scroll",height:"800px"}}>
+                                <ul  className="nav nav-tabs b4__scroll" id="bhd__cinemasTab" role="tablist" >
                                     {/* {renderDanhSachCumRap(listData,item.maHeThongRap)} */}
                                     {renderDanhSachCumRap(listData)}
                                   

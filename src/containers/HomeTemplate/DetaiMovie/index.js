@@ -1,6 +1,6 @@
 import React,{useEffect} from "react";
 import Info from "../../../components/DetailMovie__Info";
-import ShowTime from "../../../components/DetailMovie__ShowTime";
+import ShowTimeModal from "../../../components/DetailMovie__ShowTime";
 import { useParams } from "react-router-dom";
 
 import {connect } from "react-redux";
@@ -12,15 +12,19 @@ import {useSelector,useDispatch} from "react-redux";
 import { ListMovieRecommend } from "../../../components/ListMovieRecommend";
 import { Demo } from "../../../components/demo";
 
+
 // import { Link } from "react-router-dom";
  function DetailMoviePage(props) {
   let {id} = useParams();
   const listMovieData=useSelector(state=>state.listMovieReducer.data);
   const dispatch=useDispatch();
+   const listShowTimeData=useSelector(state=>state.getListDateTimeReducer.data);
+
   useEffect(()=>{
     dispatch(actListMovieApi());
+   
   },[])
-  // console.log(typeof id);
+  
   useEffect(()=>{
   
     props.fetchDetailMovie(id);
@@ -40,12 +44,16 @@ return <Loader/>
   const renderListMovie=()=>{
     return <ListMovieRecommend data={listMovieData}/>
   }
- 
+ const renderShowTime=()=>{
+   
+   return <ShowTimeModal data={listShowTimeData}/>
+ }
  
   return (
     <div>
 
       <div> {renderDetailMovieInfo()}</div>
+     
       <div>{renderListMovie()}</div>
       
      

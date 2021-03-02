@@ -25,7 +25,7 @@ const routesHome = [
 const routesCheckout=[
   {
     exact:false,
-    path:"/checkout",
+    path:"/checkout/:id",
     Component:CheckOutPage,
   }
 ]

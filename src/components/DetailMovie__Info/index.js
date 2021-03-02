@@ -3,9 +3,14 @@ import React,{useEffect} from "react";
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import {Link} from "react-router-dom";
+import ShowTimeModal from "../DetailMovie__ShowTime";
 
 export default function Info(props) {
   const { MovieData } = props;
+const renderButton=()=>{
+  return <ShowTimeModal/>
+}
+  
 
  
 
@@ -35,7 +40,8 @@ export default function Info(props) {
                 <p style={{color:"rgb(126,154,178)"}}>{MovieData && MovieData.ngayKhoiChieu}</p>
                 <h3 style={{color:"rgb(126,154,178)"}}>{MovieData && MovieData.tenPhim}</h3>
                <p>{MovieData&& MovieData.moTa}</p>
-                <Link to={"/checkout"} className="btn btn-success">Mua Vé</Link>
+                
+                {renderButton()}
               </div>
             </div>
             <div className="col-4">
