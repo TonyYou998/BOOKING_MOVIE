@@ -8,6 +8,7 @@ import listCinemaShowtimeReducer from "../../containers/HomeTemplate/HomePage/mo
 import listMovieOnCinemaReducer from "../../containers/HomeTemplate/HomePage/modules/ListMovieOnCinemaReducer";
 import getListDateTimeReducer from "../../containers/HomeTemplate/DetaiMovie/Modules/GetListDateTimeReducer";
 import listGheReducer from "../../containers/CheckOutTemplate/CheckOutPage/Modules/ListGheReducer"
+import datVeReducer from "../../containers/CheckOutTemplate/CheckOutPage/Modules/DatVeReducer";
 const rootReducer = combineReducers({
   listMovieReducer,
   NewReducers,
@@ -18,5 +19,6 @@ const rootReducer = combineReducers({
   listMovieOnCinemaReducer,
   getListDateTimeReducer,
   listGheReducer,
+  datVeReducer,
 });
 export default rootReducer;

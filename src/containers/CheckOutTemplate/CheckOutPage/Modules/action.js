@@ -40,3 +40,12 @@ const actListGheFailed=(err)=>{
     }
 
 }
+
+
+export const actRequestGhe=(ghe)=>{
+  
+    return {
+        type:"DAT_GHE",
+        ghe
+    }
+}
