@@ -1,13 +1,16 @@
 import React from "react";
-
+import {Link} from "react-router-dom";
+import TrailerModal from "../TrailerModal";
 export default function Carousel(props) {
-  const { arrMovie } = props;
+  const { arrMovie,arrCode } = props;
+  // console.log(arrMovie);
   let anh1 = arrMovie[0],
     anh2 = arrMovie[1],
     anh3 = arrMovie[2];
+    let code1=arrCode[0],code2=arrCode[1],code3=arrCode[2];
   // console.log(props);
 
-  // console.log(anh1);
+  console.log(anh1);
 
   return (
     <div>
@@ -29,40 +32,44 @@ export default function Carousel(props) {
           </ol>
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <a href="#">
+              <Link to={`/detail/${code1}`}>
                 <div class="carousel__overlay"></div>
+                 {/* src="https://s3img.vcdn.vn/123phim/2021/01/lua-deu-gap-lua-dao-16105107337344.jpg" */}
                 <img
                   className="d-block w-100"
-                  src="https://s3img.vcdn.vn/123phim/2021/01/lua-deu-gap-lua-dao-16105107337344.jpg"
+                  src={anh1}
                   alt="First slide"
                 />
 
-                <i class="fa fa-play-circle"></i>
-              </a>
+                {/* <i class="fa fa-play-circle"></i> */}
+                <TrailerModal/>
+              </Link>
             </div>
             <div className="carousel-item">
-              <a href="#">
+              <Link to={`/detail/${code2}`}>
                 <div class="carousel__overlay"></div>
+                 {/* src="https://s3img.vcdn.vn/123phim/2021/01/sam-hoi-16106874942953.jpg" */}
                 <img
                   className="d-block w-100"
-                  src="https://s3img.vcdn.vn/123phim/2021/01/sam-hoi-16106874942953.jpg"
+                 src={anh2}
                   alt="First slide"
                 />
 
                 <i class="fa fa-play-circle"></i>
-              </a>
+              </Link>
             </div>
             <div className="carousel-item">
-              <a href="#">
+              <Link to={`/detail/${code3}`}>
                 <div class="carousel__overlay"></div>
+                 {/* src="https://s3img.vcdn.vn/123phim/2021/01/em-la-cua-em-16106818552756.jpg" */}
                 <img
                   className="d-block w-100"
-                  src="https://s3img.vcdn.vn/123phim/2021/01/em-la-cua-em-16106818552756.jpg"
+                  src={anh3}
                   alt="First slide"
                 />
 
                 <i class="fa fa-play-circle"></i>
-              </a>
+              </Link>
             </div>
           </div>
           <a

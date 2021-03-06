@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Route, Switch, withRouter } from "react-router-dom";
-import { routesCheckout, routesHome } from "./routes";
+import { routesCheckout, routesHome,routesAdmin } from "./routes";
 import Carousel from "./components/Carousel";
 import HomeTemplate from "./containers/HomeTemplate";
 import CheckOutTemplate from "./containers/CheckOutTemplate";
@@ -12,6 +12,7 @@ import ChildUserCallBack from "./HOOKS/ChildUserCallBack";
 import DemoHooksUserCallBack from "./HOOKS/DemoHooksUserCallBAck";
 import DemoHooksUseMemo from "./HOOKS/DemoHooksUseMemo";
 import BTGameBauCua from "./baucua/btgamebaucua";
+import AdminTemplate from "./containers/AdminTemplate";
 
 export default class App extends Component {
   showLayoutHome = (routes) => {
@@ -43,12 +44,27 @@ export default class App extends Component {
     }
 
   }
+  ShowLayoutAdmin=(routes)=>{
+    if(routes && routes.length>0){
+      return routes.map((item,index)=>{
+        return (
+          <AdminTemplate
+            key={index}
+            exact={item.exact}
+            path={item.path}
+            Component={item.Component}
+          />
+        )
+      })
+    }
+  }
   render() {
     return (
       <BrowserRouter>
         <Switch>
           {this.showLayoutHome(routesHome)}
           {this.showLayoutCheckout(routesCheckout)}
+          {this.ShowLayoutAdmin(routesAdmin)}
         </Switch>
 
       </BrowserRouter>

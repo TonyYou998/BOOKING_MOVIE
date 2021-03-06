@@ -45,7 +45,7 @@ const actListGheFailed=(err)=>{
 export const actRequestGhe=(ghe)=>{
   
     return {
-        type:"DAT_GHE",
+        type:ActionType.DAT_GHE,
         ghe
     }
 }

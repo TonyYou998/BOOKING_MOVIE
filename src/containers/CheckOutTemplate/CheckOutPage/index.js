@@ -3,6 +3,7 @@
     import {useParams} from "react-router-dom";
     import {actListGheApi} from "./Modules/action";
     import {useDispatch,useSelector} from "react-redux";
+    import DetailTicket from "../../../components/DetaiTicket";
     export default function CheckOutPage(props) {
         let {id} =useParams();
         const dispatch=useDispatch();
@@ -13,9 +14,10 @@
 
         // console.log(props);
         return (    
-            <div >
+            <div className="d-flex" >
                 {/* this is checkout page */}
                 <SeatCheckout data={listGheData}/>
+                <DetailTicket/>
             </div>
         )
     }

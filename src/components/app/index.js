@@ -14,11 +14,11 @@ export default function App() {
                   và đổi quà hấp dẫn.
                 </p>
                 <button>
-                  <a href="#">App miễn phí - Tải về ngay!</a>
+                  <a href="https://apps.apple.com/us/app/123phim-mua-ve-lien-tay-chon/id615186197">App miễn phí - Tải về ngay!</a>
                 </button>
                 <span>
-                  TIX có hai phiên bản <a href="#">iOS</a> &amp;
-                  <a href="#">Android</a>
+                  TIX có hai phiên bản <a href="https://apps.apple.com/us/app/123phim-mua-ve-lien-tay-chon/id615186197">iOS</a> &amp;
+                  <a href="https://play.google.com/store/apps/details?id=vn.com.vng.phim123">Android</a>
                 </span>
               </div>
             </div>

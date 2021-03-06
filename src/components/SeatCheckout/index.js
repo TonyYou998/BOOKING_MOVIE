@@ -28,10 +28,12 @@ export default function SeatCheckout(props) {
                     <img style={{width:"100%"}} src="https://tix.vn/app/assets/img/icons/screen.png"/>
                 </div>
                 <div className="seat_row">
-                        <SeatRow data={data}/>
+                    <SeatRow data={data}/>
+                    
 
                 </div>
             </div>
+            
         </div>
     )
 }

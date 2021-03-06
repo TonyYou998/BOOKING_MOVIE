@@ -1,3 +1,4 @@
+import * as ActionType from "./constants";
 const initialState = {
     data:[
        
@@ -7,7 +8,7 @@ const initialState = {
 const datVeReducer= (state = initialState,action) => {
     switch (action.type) {
 
-    case "DAT_GHE":
+    case ActionType.DAT_GHE:
         let danhSachGheDangDatUpdate=[...state.data];
         
         let index=danhSachGheDangDatUpdate.findIndex(gheDangDat=>gheDangDat.stt===action.ghe.stt);

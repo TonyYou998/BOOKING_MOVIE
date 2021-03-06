@@ -1,0 +1,28 @@
+.company__name{
+    background-color: #272b30;
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+}
+.sidebar__wrapper{
+    height: 100vh;
+    width: 18%;
+    background-color: #f8f9fa;
+    .sidebar__nav{
+        padding-right: 10px;
+        cursor: pointer;
+        li{
+            margin: 0 auto;
+            
+            padding: 40px 0;
+            list-style: none;
+            color:#007bff;
+            font-weight: 500;
+            font-size: 18px;
+            i{
+                color:#ababab;
+                font-size: 24px;
+            }
+        }
+    }
+}

@@ -11,6 +11,7 @@ import {actListMovieApi} from "../HomePage/modules/action";
 import {useSelector,useDispatch} from "react-redux";
 import { ListMovieRecommend } from "../../../components/ListMovieRecommend";
 import { Demo } from "../../../components/demo";
+import TrailerModal from "../../../components/TrailerModal";
 
 
 // import { Link } from "react-router-dom";
@@ -48,6 +49,9 @@ return <Loader/>
    
    return <ShowTimeModal data={listShowTimeData}/>
  }
+ const renderDemo=()=>{
+   return <TrailerModal/>
+ }
  
   return (
     <div>
@@ -55,6 +59,7 @@ return <Loader/>
       <div> {renderDetailMovieInfo()}</div>
      
       <div>{renderListMovie()}</div>
+      <div>{renderDemo()}</div>
       
      
       

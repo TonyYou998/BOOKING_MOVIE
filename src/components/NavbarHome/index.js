@@ -1,6 +1,19 @@
-import React from "react";
+import React, { Fragment } from "react";
 import {Link} from "react-router-dom"
 export default function NavbarHome() {
+    
+  const showName=()=>{
+      if(localStorage.getItem("user")){
+     
+        const info=JSON.parse(localStorage.getItem("user"));
+        
+        return <Fragment>{info.taiKhoan}</Fragment>
+      }
+      else{
+        return <Fragment>đăng nhập</Fragment>
+      }
+  }
+  
   return (
     <div>
       <header className="header">
@@ -35,9 +48,10 @@ export default function NavbarHome() {
                     src="https://tix.vn/app/assets/img/avatar.png"
                     alt="avatar"
                   />
-                  <a className="nav-link" href="#">
-                    Đăng Nhập
-                  </a>
+                  <Link to={"/login"} className="nav-link " >
+                    {showName()}
+                  </Link>
+
                 </li>
                 <li className="nav-item dropdown">
                   <img
@@ -71,6 +85,7 @@ export default function NavbarHome() {
           </div>
         </div>
       </header>
+      
     </div>
   );
 }

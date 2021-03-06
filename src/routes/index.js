@@ -1,6 +1,8 @@
 import HomePage from "../containers/HomeTemplate/HomePage";
 import DetailMoviePage from "../containers/HomeTemplate/DetaiMovie";
 import CheckOutPage from "../containers/CheckOutTemplate/CheckOutPage";
+import DashBoardPage from "../containers/AdminTemplate/DashBoardPage";
+import LoginPage from "../containers/HomeTemplate/LoginPage";
 
 const routesHome = [
   {
@@ -20,6 +22,11 @@ const routesHome = [
 
     Component: DetailMoviePage,
   },
+  {
+    exact:false,
+    path:"/login",
+    Component:LoginPage,
+  }
  
 ];
 const routesCheckout=[
@@ -28,5 +35,12 @@ const routesCheckout=[
     path:"/checkout/:id",
     Component:CheckOutPage,
   }
+];
+const routesAdmin=[
+  {
+    exact:false,
+    path:"/dashboard",
+    Component:DashBoardPage,
+  }
 ]
-export { routesHome,routesCheckout };
+export { routesHome,routesCheckout ,routesAdmin};

@@ -16,19 +16,25 @@ function HomePage(props) {
 
   const renderCarousel = () => {
     const { data } = props;
-    let arr = [];
     // console.log(data);
+    let arrHinhAnh = [];
+    let arrMaPhim=[];
     if (data && data.length > 0) {
+      console.log(data);
       data.forEach((item, index) => {
-        if (index === 3 || index === 5 || index === 7) arr.push(item.hinhAnh);
+      
+        if (index === 0 || index === 1 || index === 2){
+          arrHinhAnh.push(item.hinhAnh);
+          arrMaPhim.push(item.maPhim);
+        } 
       });
     }
-    return <Carousel arrMovie={arr} />;
+    return <Carousel arrMovie={arrHinhAnh} arrCode={arrMaPhim} />;
   };
 
   const renderListMovieWrapper = () => {
     const { data } = props;
-    // console.log(data);
+    
     return <ListMovieWrapper data={data} />;
   };
   const renderNews = () => {
@@ -50,7 +56,7 @@ function HomePage(props) {
     <div>
       <div>{renderCarousel()}</div>
       <div>{renderListMovieWrapper()}</div>
-      <div>{renderTimeTable()}</div>
+      {/* <div>{renderTimeTable()}</div> */}
       <div>{renderNews()}</div>
       <div>{renderApp()}</div>
       <div>{renderFooter()}</div>
@@ -58,7 +64,7 @@ function HomePage(props) {
   );
 }
 const mapStateToProps = (state) => {
-  // console.log(state);
+
   return {
     data: state.listMovieReducer.data,
     NewData: state.NewReducers.NewData,
