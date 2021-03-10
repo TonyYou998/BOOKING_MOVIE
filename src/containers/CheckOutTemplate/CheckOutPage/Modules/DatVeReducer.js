@@ -2,7 +2,8 @@ import * as ActionType from "./constants";
 const initialState = {
     data:[
        
-    ]
+    ],
+   
 }
 
 const datVeReducer= (state = initialState,action) => {
@@ -18,9 +19,21 @@ const datVeReducer= (state = initialState,action) => {
         else{
             danhSachGheDangDatUpdate.push(action.ghe);
         }
+        
+        
         state.data=danhSachGheDangDatUpdate;
         return { ...state}
-
+        case ActionType.CLEAR__REDUCER:
+            state.data=[];
+    // case ActionType.DAT_VE_REQUEST:
+    //     state.data=null;
+    //     state.err=null;
+    // case ActionType.DAT_VE_SUCCESS:
+    //     state.data=action.payload;
+    //     state.err=false;
+    // case ActionType.DAT_VE_FAILED:
+    //     state.data=null;
+    //     state.err=true;
     default:
         return {...state}
     }

@@ -2,37 +2,53 @@ import React,{useState} from "react";
 import {useDispatch} from "react-redux";
 import {actLoginApi} from "../../containers/AdminTemplate/DashBoardPage/modules/action";
 import {useHistory,Redirect} from "react-router-dom";
+import {Link} from "react-router-dom";
+
 export default function LoginForm(props) {
-        let [taiKhoan,setTaiKhoan]=useState({
+      const info=JSON.parse(localStorage.getItem("user"));
+        let dispatch=useDispatch();
+        let history=useHistory();  
+    let [taiKhoan,setTaiKhoan]=useState({
             taiKhoan:"",
             
         });
-        const info=JSON.parse(localStorage.getItem("user"));
-
-        let history=useHistory();
+      
         let [matKhau,setMatKhau]=useState(
             {
                 matKhau:"",
         
             }
         );
-        let dispatch=useDispatch();
+        let [email,setEmail]=useState({
+            email:"",
+        })
         
-        const handleOnChangeTaiKhoan=(e)=>{
+        
+       const handleOnChangeTaiKhoan=(e)=>{
             const {value}=e.target;
             setTaiKhoan(value);
 
 
         }
-        const handleOnChangeMatKhau=(e)=>{
+         const handleOnChangeMatKhau=(e)=>{
             const {value}=e.target;
             setMatKhau(value);
 
         }
+          const handleOnChangeEmail=(e)=>{
+            const {value}=e.target;
+            setEmail(value);
+
+
+        }
+      
         const handleLogin=(e)=>{
+          
             e.preventDefault();
+             
             dispatch(actLoginApi(taiKhoan,matKhau,history));
         }
+        
        
     
         if(localStorage.getItem("user"))
@@ -45,15 +61,31 @@ export default function LoginForm(props) {
                     và bảo mật thông tin!
                 </p>
             </div>
-            <div className="form"  onSubmit={handleLogin}>
+            <div className="form"  onSubmit={
+                 handleLogin }>
                 <p>Username</p>
                 <input type="text" name="taiKhoan" className="input" onChange={handleOnChangeTaiKhoan}></input>
                 <p>Password</p>
                 <input type="text" name="matKhau" className="input" onChange={handleOnChangeMatKhau}></input>
+
                 <form className="logNreg mt-3">
                     <button type="submit" className="btn btn-success button mr-2">Đăng Nhập</button>
-                    <button type="submit" className="btn btn-info button">Đăng Ký</button>
+                     <Link to={"/register"} className="btn btn-primary" >
+                           Đăng ký
+                    </Link>
                 </form>
+               
+            <div>
+           
+               
+                </div>
+
+
+
+
+
+                    
+                
             </div>
         </div>
     )

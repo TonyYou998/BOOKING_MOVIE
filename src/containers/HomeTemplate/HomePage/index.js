@@ -16,11 +16,11 @@ function HomePage(props) {
 
   const renderCarousel = () => {
     const { data } = props;
-    // console.log(data);
+    
     let arrHinhAnh = [];
     let arrMaPhim=[];
     if (data && data.length > 0) {
-      console.log(data);
+      
       data.forEach((item, index) => {
       
         if (index === 0 || index === 1 || index === 2){

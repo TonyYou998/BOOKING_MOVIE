@@ -10,6 +10,8 @@ import getListDateTimeReducer from "../../containers/HomeTemplate/DetaiMovie/Mod
 import listGheReducer from "../../containers/CheckOutTemplate/CheckOutPage/Modules/ListGheReducer"
 import datVeReducer from "../../containers/CheckOutTemplate/CheckOutPage/Modules/DatVeReducer";
 import loginReducer from "../../containers/AdminTemplate/DashBoardPage/modules/loginReducer";
+import historyReducer from "../../containers/AdminTemplate/HistoryPage/Modules/reducer";
+import listUserReducer from "../../containers/AdminTemplate/RemovePage/Modules/reducer";
 const rootReducer = combineReducers({
   listMovieReducer,
   NewReducers,
@@ -22,5 +24,7 @@ const rootReducer = combineReducers({
   listGheReducer,
   datVeReducer,
   loginReducer,
+  historyReducer,
+  listUserReducer,
 });
 export default rootReducer;

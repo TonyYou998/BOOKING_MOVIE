@@ -1,12 +1,14 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { useHistory } from "react-router";
+import { Redirect, useHistory } from "react-router";
+import EditInfo from "../../../components/EditInfo";
 import { actLogout } from "./modules/action";
 export default function Dashboard(props) {
     let dispatch=useDispatch();
     let history=useHistory();
     const info=JSON.parse(localStorage.getItem("user"));
-    console.log(info);
+    if(!localStorage.getItem("user"))
+        return <Redirect to="/login"/>
     return (
         
             <div className="container col-10 info__wrapper py-5 px-5">
@@ -38,7 +40,13 @@ export default function Dashboard(props) {
                         
                     </tbody>
                 </table>
-                <div className="btn btn-danger" onCLick={dispatch(actLogout(history))} >Logout</div>
+                <div className="row">
+                    <div className="btn btn-danger mr-2" onClick={()=>{
+                        dispatch(actLogout(history))
+                        }} >Logout</div>
+                    {/* <EditInfo/> */}
+                </div>
+               
             </div>
         
     

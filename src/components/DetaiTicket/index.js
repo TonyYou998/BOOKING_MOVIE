@@ -1,14 +1,18 @@
 import { data } from "jquery";
 import React from "react";
-import {useSelector} from "react-redux";
-
+import {useDispatch, useSelector} from "react-redux";
+import { useHistory, useParams } from "react-router";
+import {actDatVeApi} from "../../containers/CheckOutTemplate/CheckOutPage/Modules/action";
 export default function DetailTicket(props) {
+    let history=useHistory();
+    let {id}=useParams();
     
+    const listGhe = useSelector(state => state.datVeReducer.data);
     let movieData=useSelector(state=>state.listGheReducer.data);
     const thongTinPhim=movieData && movieData.thongTinPhim;
    
     let gheData=useSelector(state=>state.datVeReducer.data);
-   
+    let dispatch=useDispatch();
     const rennderMaGhe=(data)=>{
     
         return data.map((item,index)=>{
@@ -27,6 +31,24 @@ export default function DetailTicket(props) {
 
        },0)
 
+    }
+    const handleDatVe=(history)=>{
+        if(localStorage.getItem("user")){
+            const info=JSON.parse(localStorage.getItem("user"));
+          
+           const data={
+                maLichChieu:id,
+                danhSachVe:listGhe,
+                taiKhoanNguoiDung:info.taiKhoan,
+            }
+           console.log(data);
+           dispatch(actDatVeApi(data,info.accessToken,history));
+         
+            
+        }
+        else {
+            history.replace("/login");
+        }
     }
     return (
         <div className="detailticket__wrapper">
@@ -62,7 +84,9 @@ export default function DetailTicket(props) {
                 <span className="title ml-1 ">Mã vé sẽ được gửi qua tin nhắn <span style={{color:"#f9b566"}}>SMS</span> (tin nhắn Zalo) và <span style={{color:"#f9b566"}}>Emaill</span> đã nhập.</span>
             </div>
             <div className="booking__button">
-                <button className="btn btn-primary">Đặt Vé</button>
+                <button className="btn btn-primary" onClick={()=>{
+                    handleDatVe(history);
+                }}>Đặt Vé</button>
             </div>
         </div>
     )

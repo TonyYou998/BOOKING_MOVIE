@@ -11,9 +11,10 @@
     .sidebar__nav{
         padding-right: 10px;
         cursor: pointer;
-        li{
+        a{
+            text-decoration: none;
             margin: 0 auto;
-            
+            display: block;
             padding: 40px 0;
             list-style: none;
             color:#007bff;

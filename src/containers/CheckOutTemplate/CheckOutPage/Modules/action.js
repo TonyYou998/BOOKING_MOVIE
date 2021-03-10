@@ -49,3 +49,56 @@ export const actRequestGhe=(ghe)=>{
         ghe
     }
 }
+
+
+export const actDatVeApi=(data,accessToken,history)=>{
+    return (dispatch)=>{
+        dispatch(actDatVeRequest());
+        mainAPi
+        .post("/QuanLyDatVe/DatVe",data,{  
+            headers: { Authorization: `Bearer ${accessToken}` }
+        })
+        .then((result)=>{
+           dispatch(actDatVeSuccess(result.data));
+            history.replace("/noti");
+
+        })
+        .catch((err)=>{
+            dispatch(actDatVeFailed(err));
+
+        })
+
+    }
+}
+
+export const actClearReducerDispatch=()=>{
+    return (dispatch)=>{
+        dispatch(actClearReducer());
+
+    }
+}
+const actDatVeRequest=()=>{
+    return {
+        type:ActionType.DAT_VE_REQUEST,
+    }
+}
+const actDatVeSuccess=(data)=>{
+    return {
+        type:ActionType.DAT_VE_SUCCESS,
+        payload:data,
+    }
+
+}
+const actDatVeFailed=(err)=>{
+    return {
+        type:ActionType.DAT_VE_FAILED,
+        payload:err,
+    }
+
+}
+
+const actClearReducer=()=>{
+    return{
+        type:ActionType.CLEAR__REDUCER,
+    }
+}

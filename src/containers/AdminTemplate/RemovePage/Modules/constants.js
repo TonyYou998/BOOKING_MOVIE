@@ -1,0 +1,5 @@
+export const FETCH_LIST_USER_REQUEST="listUserReducer/FETCH_LIST_USER_REQUEST";
+
+export const FETCH_LIST_USER_SUCCESS="listUserReducer/FETCH_LIST_USER_SUCCESS";
+
+export const FETCH_LIST_USER_FAILED="listUserReducer/FETCH_LIST_USER_FAILED";

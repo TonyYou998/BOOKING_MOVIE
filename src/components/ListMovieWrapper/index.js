@@ -7,7 +7,7 @@ export default function ListMovieWrapper(props) {
 
     if (data && data.length > 0) {
       return data.map((movie, index) => {
-        return <ListMovie movie={movie} />;
+        return <ListMovie key={index} movie={movie} />;
       });
     }
   };

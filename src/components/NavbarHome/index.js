@@ -20,7 +20,7 @@ export default function NavbarHome() {
         <div className="row">
           <div className="col-3">
             <div className="header__logo">
-              <Link to="/home">
+              <Link to="/">
                 <img
                   src="https://tix.vn/app/assets/img/icons/web-logo.png"
                   alt="web-logo"
