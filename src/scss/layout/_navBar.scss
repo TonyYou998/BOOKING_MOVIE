@@ -1,5 +1,5 @@
 .header {
-	padding: 10px 0;
+	padding: 5px 0;
 	background-color: rgba(255, 255, 255, 0.95);
 	font-size: 0.9rem;
 	font-weight: 500;
@@ -7,6 +7,9 @@
 	z-index: 1;
 	width: 100%;
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+	.row{
+		width: 100% !important;
+	}
 	.header__logo {
 		img {
 			height: 50px;
@@ -68,16 +71,50 @@
 	}
 }
 
+
+
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
 	background-color: transparent !important;
 }
+@media screen and (min-width:1200px){
 
-@media screen and (max-width: 768px) {
-	.header__nav {
+	.dropdown__button{
+	display: none ;
+	}
+}
+
+
+@media screen and (max-width:1200px){
+	.row{
+		justify-content: space-between;
+	}
+		.middleLi {
 		display: none;
 	}
-	.header__login {
-		max-width: 100%;
+	.login{
+		display: none;
 	}
+	.dropdown__button{
+		
+		float: right !important;
+		
+		img{
+			vertical-align: middle !important;
+			height: 15.9px !important;
+			width: 25px !important;
+			transform: translateY(50%);
+		}
+	}
+}
+@media screen and (max-width:645px){
+	.carousel{
+		display: none;
+	}
+}
+@media screen and (max-width:560px){
+	.row{
+		// width: 100% !important;
+	}
+
 }

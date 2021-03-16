@@ -18,7 +18,7 @@ export default function NavbarHome() {
     <div>
       <header className="header">
         <div className="row">
-          <div className="col-3">
+          <div className="col-xl-2 col-lg-2 col-md-2 col-1">
             <div className="header__logo">
               <Link to="/">
                 <img
@@ -28,7 +28,7 @@ export default function NavbarHome() {
               </Link>
             </div>
           </div>
-          <div className="col-6">
+          <div className="col-xl-7 col-lg-9 col-md-9 middleLi ">
             <nav className="header__nav">
               <ul>
                 <li>
@@ -40,7 +40,7 @@ export default function NavbarHome() {
               </ul>
             </nav>
           </div>
-          <div className="col-3">
+          <div className="col-xl-3  login pl-0">
             <div className="header__login">
               <ul className="nav nav-pills">
                 <li className="nav-item border-right">
@@ -83,9 +83,12 @@ export default function NavbarHome() {
               </ul>
             </div>
           </div>
+          <div className="dropdown__button col-lg-1 col-sm-2 col-2">
+              <img src="https://tix.vn/app/assets/img/icons/menu-options.png"/>
+          </div>
         </div>
       </header>
       
     </div>
   );
-}
+} 

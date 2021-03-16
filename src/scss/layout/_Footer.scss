@@ -60,3 +60,10 @@ footer {
     }
   }
 }
+
+
+@media screen and (max-width:650px){
+  .row__content{
+    display: none !important;
+  }
+}

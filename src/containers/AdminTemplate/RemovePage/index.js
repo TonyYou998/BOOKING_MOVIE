@@ -1,12 +1,23 @@
+import {useState} from "react"
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { actFetchListUserApi } from "./Modules/action";
+import { Redirect } from "react-router";
+import { actFetchListUserApi,actDeleteUserAPi } from "./Modules/action";
 
 export default function RemovePage(props) {
+  
     let dispatch=useDispatch();
+    const info=JSON.parse(localStorage.getItem("user"));
+    let [state,setState]=useState({
+        count:0,
+    })
     useEffect(()=>{
         dispatch(actFetchListUserApi());
-    },[])
+    },[state]);
+    const handleDelete=(id)=>{
+        dispatch(actDeleteUserAPi(id));
+
+    }
     const listUserData=useSelector(state=>state.listUserReducer.data);
    
 
@@ -14,16 +25,20 @@ export default function RemovePage(props) {
     
         if(data && data.length>0){
              return data.map((item,index)=>{
-                console.log(item);
+                
              return(
 
 
              <tr key={index}>
-                 lll
-                 {/* <td>{showTenHeThongRap(item.danhSachGhe)}</td>
-            //     <td>{showTenRap(item.danhSachGhe)}</td>
-            //     <td>{showTenGhe(item.danhSachGhe)}</td> */}
-               
+                 
+                 <td>{item.taiKhoan}</td>
+                <td>{item.email}</td>
+                 <td>{item.maLoaiNguoiDung}</td>
+                <td><button className="btn btn-danger" onClick={()=>{
+                    handleDelete(item.taiKhoan);
+                    setState({count:state.count+1})
+                
+                }} >delete</button></td>
               
              </tr>
         )
@@ -34,11 +49,12 @@ export default function RemovePage(props) {
       
          
     }
-
+  if(!localStorage.getItem("user") || info.maLoaiNguoiDung!=="QuanTri")
+    return <Redirect to="/login"/>
     return (
        <div className="history__wrapper">
                <h2 style={{width:"30%"}}>Danh sách account</h2>
-               <div className="table-responsive">
+               <div className="table-responsive" style={{height:"600px",overflow:"auto"}}>
                    <table className="table table-striped table-sm">
                        <thead>
                              <tr>
@@ -46,11 +62,11 @@ export default function RemovePage(props) {
                                <th>Username</th>
                                <th>Email</th>
                                <th>Vị trí</th>
-                              
+                                <th>Xóa</th>
                             
                            </tr>
                        </thead>
-                       <tbody style={{height:"500px",overflowY:"scroll"}}>
+                       <tbody >
                          {renderTable(listUserData)}
                        </tbody>
                    </table>

@@ -8,7 +8,8 @@ import HistoryPage from "../containers/AdminTemplate/HistoryPage";
 import RegPage from "../containers/HomeTemplate/RegPage";
 import AddMemPage from "../containers/AdminTemplate/AddMemPage";
 import RemovePage from "../containers/AdminTemplate/RemovePage";
-
+import AddMoviePage from "../containers/AdminTemplate/AddMoviePage";
+import RegShowTime from "../containers/AdminTemplate/regshowtime";
 const routesHome = [
   {
     exact: true,
@@ -67,6 +68,16 @@ const routesAdmin=[
     exact:false,
     path:"/remove",
     Component:RemovePage,
+  },
+   {
+    exact:false,
+    path:"/addmovie",
+    Component:AddMoviePage,
+  },
+   {
+    exact:false,
+    path:"/showtime",
+    Component:RegShowTime,
   }
   
 ];

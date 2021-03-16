@@ -16,6 +16,26 @@ export const actListMovieApi = () => {
       });
   };
 };
+// //  xóa phim
+// export const actDeleteMovieApi=(maPhim,token)=>{
+  
+//   return (dispatch)=>{
+//        mainAPi
+//   .delete(`/QuanLyPhim/XoaPhim?MaPhim=${maPhim}`,{headers: { Authorization: `Bearer ${token}` }})
+//   .then((result)=>{
+//         alert(result.data);
+       
+    
+//     })
+//     .catch((err)=>{
+//         alert(err.response.data);
+       
+//     })
+//   }
+ 
+// }
+
+
 // listMovie
 const actListMovieRequest = () => {
   return {
@@ -152,7 +172,7 @@ const actListCinemaShowtimeFailed=(err)=>{
 }
 // listPhimTheoHeThongRap
 export  const actListMovieOnCinemaApi=(id)=>{
-  // console.log(id);
+ 
   return (dispatch)=>{
     
     dispatch(actListMovieOnCinemaRequest());

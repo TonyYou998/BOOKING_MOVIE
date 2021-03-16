@@ -13,10 +13,10 @@ export default function SideBarAdmin(props) {
             </div>
             <ul className="sidebar__nav">
                 <Link to={"/dashboard"}><span><i class=" mr-2 fa fa-user-secret"></i></span>Info</Link>
-                <Link><span><i class="mr-2 fa fa-calculator"></i></span>Quản Lý Vé</Link>
+                <Link to={"/addmovie"} ><span><i class="mr-2 fa fa-calculator"></i></span>Quản Lý Phim</Link>
                 <Link to={"/addmem"}><span><i class="mr-2 fa fa-plus"></i></span>Thêm Người Dùng</Link>
                 <Link to={"/remove"}><i class="mr-2 fa fa-minus-circle"></i>Xóa acc</Link>
-                <Link><span><i class="mr-2 fa fa-calendar"></i></span>Quản lý Lịch Chiếu</Link>
+                <Link to={"showtime"}><span><i class="mr-2 fa fa-calendar"></i></span>Quản lý Lịch Chiếu</Link>
                  <Link to={"/"}><span><i class="mr-2 fa fa-home"></i></span>Home</Link>
             </ul>
         </div>

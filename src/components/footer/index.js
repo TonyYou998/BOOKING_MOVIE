@@ -85,7 +85,7 @@ export default function Footer() {
               </div>
             </div>
             <hr className="hrFooter" />
-            <div className="row">
+            <div className="row row__content">
               <img className="zion__logo col-1" src="./img/zion-logo.jpg" alt />
               <div className="col-9 info">
                 <span className="text-white">

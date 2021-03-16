@@ -42,4 +42,26 @@ import * as ActionType from "./constants";
 
     }
 
+    export const actDeleteUserAPi=(id)=>{
+        let info=JSON.parse(localStorage.getItem("user"));
+        
+            return (dispatch)=>{
+                mainAPi
+                .delete(`/QuanLyNguoiDung/XoaNguoiDung?TaiKhoan=${id}`,{  
+                        headers: { Authorization: `Bearer ${info.accessToken}` }
+                    })
+                .then((result)=>{
+                    
+                    alert("xóa thành công")
+
+                })
+                .catch((err)=>{
+                    
+                    alert(err.response.data)
+
+                })
+
+            }
+    }
+    
 
