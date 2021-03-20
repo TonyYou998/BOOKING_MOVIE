@@ -11,7 +11,7 @@ export default function Search(props) {
     let history=useHistory();
     let dispatch=useDispatch();
      const data = useSelector(state => state.searchMovieReducer.data);
-     console.log(data);
+    
     const handleSubmit=(e)=>{
             e.preventDefault();
             dispatch(actSeachMovieApi(state.keyWork,history));

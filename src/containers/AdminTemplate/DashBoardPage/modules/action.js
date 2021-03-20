@@ -64,20 +64,12 @@ const actLoginFailed=(err)=>{
     }
 
 
-    export const actRegApi=(taiKhoan,matKhau,email,soDt,hoTen,history)=>{
+    export const actRegApi=(state,history)=>{
       
         return (dispatch)=>{
             dispatch(actRegRequest());
             mainAPi
-            .post("/QuanLyNguoiDung/DangKy",{
-                taiKhoan,
-                matKhau,
-                email,
-                soDt,
-                maNhom: "GP01",
-                maLoaiNguoiDung: "khachHang",
-                hoTen,
-            })
+            .post("/QuanLyNguoiDung/DangKy",state)
             .then((result)=>{
                     dispatch(actRegSuccess());
                     alert("đăng ký thành công");

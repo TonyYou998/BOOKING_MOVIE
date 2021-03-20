@@ -9,64 +9,19 @@ export default function RegPage(props) {
             taiKhoan:"",
             matKhau:"",
             email:"",
+             soDt:"",
+             maNhom:"GP01",
+            maLoaiNguoiDung: "khachHang",
             hoTen:"",
-            soDt:"",
+           
         })
-         let [taiKhoan,setTaiKhoan]=useState({
-            taiKhoan:"",
-            
-        });
       
-        let [matKhau,setMatKhau]=useState(
-            {
-                matKhau:"", 
-        
-            }
-        );
-        let [email,setEmail]=useState({
-            email:"",
-        });
-          let [hoTen,sethoTen]=useState({
-            hoTen:"",
-        });
-          let [soDt,setSoDt]=useState({
-            soDt:"",
-        })
-         const handleOnChangeTaiKhoan=(e)=>{
-            const {value}=e.target;
-            setTaiKhoan(value);
-
-
-        }
-         const handleOnChangeMatKhau=(e)=>{
-            const {value}=e.target;
-            setMatKhau(value);
-
-
-        }
-         const handleOnChangeEmail=(e)=>{
-            const {value}=e.target;
-            setEmail(value);
-
-
-        }
-         const handleOnChangeHoTen=(e)=>{
-            const {value}=e.target;
-            sethoTen(value);
-
-
-        }
-         const handleOnChangeSDT=(e)=>{
-            const {value}=e.target;
-            setSoDt(value);
-
-
-        }
        const handleReg=(e)=>{
            e.preventDefault();
         
-            dispatch(actRegApi(taiKhoan,matKhau,email,soDt,hoTen,history));
+            dispatch(actRegApi(state,history));
        }
+      
     return (
         <div className="container ">
             <div className="reg__wrapper form" onSubmit={handleReg}>
@@ -75,13 +30,17 @@ export default function RegPage(props) {
                      <div class="input-group-prepend">
 		            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
 		            </div>
-                  <input name="hoTen" class="form-control" onChange={handleOnChangeHoTen} placeholder="Họ Tên" type="text"></input>
+                  <input name="hoTen" class="form-control" onChange={(e)=>{
+                      setState({...state,hoTen:e.target.value})
+                  }} placeholder="Họ Tên" type="text"></input>
                   </div>
                 <div className="form-group input-group">
                     <div className="input-group-prepend">
                         <span className="input-group-text"> <i className="fa fa-envelope" /> </span>
                     </div>
-                    <input name="email" onChange={handleOnChangeEmail} className="form-control" placeholder="Email " type="email" />
+                    <input name="email" onChange={(e)=>{
+                            setState({...state,email:e.target.value})
+                    }} className="form-control" placeholder="Email " type="email" />
                 </div>
                 <div className="form-group input-group">
                 <div className="input-group-prepend">
@@ -93,20 +52,27 @@ export default function RegPage(props) {
                     <option value={2}>+198</option>
                     <option value={3}>+701</option>
                 </select>
-                <input name="soDt" onChange={handleOnChangeSDT} className="form-control" placeholder="Phone number" type="text" />
+                <input name="soDt" onChange={(e)=>{
+                        setState({...state,soDt:e.target.value})
+                }} className="form-control" placeholder="Phone number" type="text" />
                 </div>
                 <div  className="form-group input-group">
                       <div className="input-group-prepend">
                         <span className="input-group-text"> <i className="fa fa-envelope" /> </span>
                     </div>
-                    <input name="taiKhoan" onChange={handleOnChangeTaiKhoan} className="form-control" placeholder="Tên Tài Khoản" type="text" />
+                    <input name="taiKhoan" onChange={(e)=>{
+                            setState({...state,taiKhoan:e.target.value});
+                    }} className="form-control" placeholder="Tên Tài Khoản" type="text" />
 		         
                 </div>
                 <div className="form-group input-group">
                 <div className="input-group-prepend">
                     <span className="input-group-text"> <i className="fa fa-lock" /> </span>
                 </div>
-                <input name="matKhau" onChange={handleOnChangeMatKhau} className="form-control" placeholder="Mật Khẩu" type="password" />
+                <input name="matKhau" onChange={(e)=>{
+                    setState({...state,taiKhoan:e.target.value})
+
+                }} className="form-control" placeholder="Mật Khẩu" type="password" />
                 </div>
                 <form className="form-group">
                     <button type="submit" className="btn btn-primary btn-block" > Đăng Ký</button>

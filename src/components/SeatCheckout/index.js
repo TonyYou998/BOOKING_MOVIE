@@ -4,7 +4,7 @@ import {Link, useParams} from "react-router-dom";
 export default function SeatCheckout(props) {
     const {data}=props;
     const {id}=useParams();
-    console.log(id);
+   
     return (
         <div className="Checkout__wrapper">
             
