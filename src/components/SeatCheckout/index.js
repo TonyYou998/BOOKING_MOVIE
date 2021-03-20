@@ -1,9 +1,10 @@
 import React from "react";
 import SeatRow from "../SeatRow";
+import {Link, useParams} from "react-router-dom";
 export default function SeatCheckout(props) {
     const {data}=props;
-    
-  
+    const {id}=useParams();
+    console.log(id);
     return (
         <div className="Checkout__wrapper">
             
@@ -32,7 +33,9 @@ export default function SeatCheckout(props) {
                     
                  
                 </div>
-
+                <div className="button_mobile">
+                    <Link to={`/checkoutmobile/${id}`} className="btn btn-success">Mua vé</Link>
+                </div>
             </div>
          
         </div>

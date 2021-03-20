@@ -10,6 +10,7 @@ import AddMemPage from "../containers/AdminTemplate/AddMemPage";
 import RemovePage from "../containers/AdminTemplate/RemovePage";
 import AddMoviePage from "../containers/AdminTemplate/AddMoviePage";
 import RegShowTime from "../containers/AdminTemplate/regshowtime";
+import CheckOutMobile from "../components/checkoutmobile";
 const routesHome = [
   {
     exact: true,
@@ -46,7 +47,11 @@ const routesCheckout=[
     path:"/checkout/:id",
     Component:CheckOutPage,
   },
-  
+    {
+    exact:false,
+    path:"/checkoutmobile/:id",
+    Component:CheckOutMobile,
+  },
 ];
 const routesAdmin=[
   {

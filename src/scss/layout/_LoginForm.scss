@@ -1,7 +1,6 @@
 .form__wrapper{
     width: 22%;
-    // margin: 0 auto;
-    // background-color: red;
+    
     height: 450px;
     position: absolute;
     top:50%;
@@ -48,4 +47,20 @@
         }
     }
    
+}
+
+@media screen and (max-width:1027px){
+    .form__wrapper{
+        width: 30% !important;
+    }
+}
+@media screen and (max-width:740px){
+    .form__wrapper{
+        width: 40% !important;
+    }
+}
+@media screen and (max-width:560px){
+    .form__wrapper{
+        width: 80% !important;
+    }
 }

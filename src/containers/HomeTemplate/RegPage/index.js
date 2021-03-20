@@ -5,6 +5,13 @@ import {actRegApi} from "../../AdminTemplate/DashBoardPage/modules/action";
 export default function RegPage(props) {
         let dispatch=useDispatch();
         const history=useHistory();
+        let [state,setState]=useState({
+            taiKhoan:"",
+            matKhau:"",
+            email:"",
+            hoTen:"",
+            soDt:"",
+        })
          let [taiKhoan,setTaiKhoan]=useState({
             taiKhoan:"",
             

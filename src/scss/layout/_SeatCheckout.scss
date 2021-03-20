@@ -24,6 +24,17 @@
         width: 80%;
         margin: 0 auto;
         padding-left: 40px;
+        .seat_row{
+            height: 500px;
+        }
+        .button_mobile{
+            width: 100%;
+            a{
+                  width: 80%;
+                    display: block;
+                    margin: 0 auto;
+            }
+        }
     }
 
 }

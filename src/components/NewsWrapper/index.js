@@ -6,9 +6,9 @@ export default function NewsWrapper(props) {
    
     const { data } = props;
   
-    if (data && data.length > 0) {
-      return <News news={data[0]} />;
-    }
+    
+      return <News />;
+    
   };
   return (
     <div id="news">

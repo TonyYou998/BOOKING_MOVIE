@@ -8,3 +8,9 @@
 .add_movie__wrapper{
     margin: 0 !important;
 }
+
+@media screen and (max-width:800px){
+    .reg__wrapper{
+        width: 100% !important;
+    }
+}
