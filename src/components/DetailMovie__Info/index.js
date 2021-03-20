@@ -34,8 +34,11 @@ const renderButton=()=>{
           }}
         >
           <div className="row detailMovie__conatiner">
-            <div className="col-8 d-flex">
-              <img src={MovieData && MovieData.hinhAnh} style={{width:"250px",height:"400px"}} className="pb-4" />
+            <div className="col-8 detailMovie__content row">
+              
+                <img src={MovieData && MovieData.hinhAnh} style={{width:"250px",height:"400px"}} className="pb-4" />
+
+              
               <div className="mx-2 pt-3 detailMovie__info  pl-4 pb-4">
                 <p style={{color:"rgb(126,154,178)"}}>{MovieData && MovieData.ngayKhoiChieu}</p>
                 <h3 style={{color:"rgb(126,154,178)"}}>{MovieData && MovieData.tenPhim}</h3>
@@ -44,7 +47,7 @@ const renderButton=()=>{
                 {renderButton()}
               </div>
             </div>
-            <div className="col-4">
+            <div className="col-4 markCircle">
             <CircularProgressbar value={percentage} text={`${ percentage }`} />;
             </div>
           </div>

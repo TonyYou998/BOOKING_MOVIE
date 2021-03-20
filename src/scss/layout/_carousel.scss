@@ -1,5 +1,5 @@
 .carousel {
-  padding-top: 72.33px;
+  padding-top: 62.33px;
   position: relative;
   .carousel-inner {
     .carousel-item {
@@ -40,5 +40,17 @@
         }
       }
     }
+  }
+}
+.carousel-indicators{
+  bottom: 50px !important;
+  .active{
+      background-color:#fb4226 !important;
+    }
+  li{
+    border-radius: 50%;
+    height: 12px !important;
+    width: 12px !important;
+    
   }
 }

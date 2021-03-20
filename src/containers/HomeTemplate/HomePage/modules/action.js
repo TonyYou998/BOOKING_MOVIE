@@ -16,24 +16,7 @@ export const actListMovieApi = () => {
       });
   };
 };
-// //  xóa phim
-// export const actDeleteMovieApi=(maPhim,token)=>{
-  
-//   return (dispatch)=>{
-//        mainAPi
-//   .delete(`/QuanLyPhim/XoaPhim?MaPhim=${maPhim}`,{headers: { Authorization: `Bearer ${token}` }})
-//   .then((result)=>{
-//         alert(result.data);
-       
-    
-//     })
-//     .catch((err)=>{
-//         alert(err.response.data);
-       
-//     })
-//   }
- 
-// }
+
 
 
 // listMovie
@@ -209,6 +192,49 @@ const actListMovieOnCinemaSuccess=(data)=>{
 const actListMovieOnCinemaFailed=(err)=>{
   return {
     type:ActionType.LIST_MOVIE_ON_CINEMA_FAILED,
+    payload:err,
+  }
+
+}
+
+// seacrh movie
+export const actSeachMovieApi=(name,history)=>{
+      return (dispatch)=>{
+          dispatch(actSearchMovieRequest());
+          mainAPi
+          .get(`/QuanLyPhim/LayDanhSachPhim?maNhom=GP01&tenPhim=${name}`)
+          .then((result)=>{
+            dispatch(actSearchMovieSuccess(result.data))
+           let data=result.data[0];
+
+            history.replace(`/detail/${data.maPhim}`)
+              
+          })
+          .catch((err)=>{
+            dispatch(actSearchMovieFailed(err));
+              alert("không tìm thấy phim")
+          })
+
+      }
+}
+const actSearchMovieRequest=()=>{
+    return {
+      type:ActionType.SEACRH_MOVIE_REQUEST
+    }
+}
+
+
+const actSearchMovieSuccess=(data)=>{
+
+  return {
+    type:ActionType.SEACRH_MOVIE_SUCCESS,
+    payload:data,
+  }
+
+}
+const actSearchMovieFailed=(err)=>{
+  return {
+    type:ActionType.SEACRH_MOVIE_FAILED,
     payload:err,
   }
 

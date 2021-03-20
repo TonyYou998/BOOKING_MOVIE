@@ -6,8 +6,8 @@
   padding: 120px 0;
   .app__text {
     width: 80%;
-    margin-top: 60px;
-    margin-bottom: 60px;
+
+   margin: 60px auto;
     h5 {
       font-size: 2rem;
       line-height: 3.4rem;
@@ -24,8 +24,9 @@
       background-color: #fb4226;
       padding: 10px;
       border-radius: 4px;
-      margin-top: 25px;
-      margin-bottom: 10px;
+      // margin-top: 25px;
+      // margin-bottom: 10px;
+      margin: 25px auto 10px;
       a {
         color: white;
         font-size: 1.2rem;

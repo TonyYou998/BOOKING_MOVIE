@@ -12,10 +12,10 @@
             dispatch(actListGheApi(id))
         },[])
 
-        // console.log(props);
+        
         return (    
             <div className="d-flex" >
-                {/* this is checkout page */}
+            
                 <SeatCheckout data={listGheData}/>
                 <DetailTicket/>
             </div>

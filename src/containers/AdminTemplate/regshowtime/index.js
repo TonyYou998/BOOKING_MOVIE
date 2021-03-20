@@ -15,15 +15,15 @@ export default function RegShowTime(props) {
         const handleSubmit=(e)=>{
             e.preventDefault();
             
-            // console.log("abc");
+         
             dispatch(actRegShowTimeApi(state,info.accessToken))
         }
-        // console.log(state);
+        
     return (
          <div className="container  ">
            
             <div className="reg__wrapper form" onSubmit={handleSubmit} >
-                  <h1 class="text-center">Thêm phim</h1>
+                  <h1 class="text-center">Thêm lịch chiếu</h1>
                   
                 <div className="form-group input-group">
                     <div className="input-group-prepend">

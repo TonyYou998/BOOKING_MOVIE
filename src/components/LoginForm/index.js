@@ -66,7 +66,7 @@ export default function LoginForm(props) {
                 <p>Username</p>
                 <input type="text" name="taiKhoan" className="input" onChange={handleOnChangeTaiKhoan}></input>
                 <p>Password</p>
-                <input type="text" name="matKhau" className="input" onChange={handleOnChangeMatKhau}></input>
+                <input type="password" name="matKhau" className="input" onChange={handleOnChangeMatKhau}></input>
 
                 <form className="logNreg mt-3">
                     <button type="submit" className="btn btn-success button mr-2">Đăng Nhập</button>

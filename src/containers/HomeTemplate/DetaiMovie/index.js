@@ -58,8 +58,8 @@ return <Loader/>
 
       <div> {renderDetailMovieInfo()}</div>
      
-      <div>{renderListMovie()}</div>
-      <div>{renderDemo()}</div>
+      <div className="detailMovie__listMovie">{renderListMovie()}</div>
+      {/* <div>{renderDemo()}</div> */}
       
      
       

@@ -1,4 +1,8 @@
 .movie__wrapper {
+  .mobile{
+     
+    display: none;  
+  }
   .nav-tabs {
     padding: 100px 0 10px;
     width: 100% ;
@@ -24,9 +28,11 @@
   }
 }
 
+
 .movie__mobile{
   img{
     width: 100%;
+    border-radius: 4px;
   }
   
 }
@@ -66,4 +72,11 @@
   .desktop{
     display: none !important;
   }
+  .mobile{
+    display: block !important ;
+  }
+  .mobile__display{
+    display: flex !important;
+  }
+  
 }

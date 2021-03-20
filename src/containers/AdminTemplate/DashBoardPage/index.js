@@ -44,7 +44,7 @@ export default function Dashboard(props) {
                     <div className="btn btn-danger mr-2" onClick={()=>{
                         dispatch(actLogout(history))
                         }} >Logout</div>
-                    {/* <EditInfo/> */}
+                    <EditInfo/>
                 </div>
                
             </div>

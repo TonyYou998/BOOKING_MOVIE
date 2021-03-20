@@ -7,13 +7,16 @@ import ListMovieWrapper from "../../../components/ListMovieWrapper";
 import App from "../../../components/app";
 import Footer from "../../../components/footer";
 import TimeTable from "../../../components/TimeTable";
+import Search from "../../../components/search";
 
 function HomePage(props) {
   useEffect(() => {
     props.fetchListMovie();
     props.fetchNew();
   }, []);
-
+    const renderSearch=()=>{
+        return <Search/>
+    }
   const renderCarousel = () => {
     const { data } = props;
     
@@ -55,6 +58,7 @@ function HomePage(props) {
   return (
     <div>
       <div>{renderCarousel()}</div>
+      <div>{renderSearch()}</div>
       <div>{renderListMovieWrapper()}</div>
       {/* <div>{renderTimeTable()}</div> */}
       <div>{renderNews()}</div>

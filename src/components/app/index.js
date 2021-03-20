@@ -6,8 +6,8 @@ export default function App() {
       <section className="app" style={{ background: "url(./img/backapp.jpg)" }}>
         <div className="container">
           <div className="row">
-            <div className="col-md-6 col-sm-12">
-              <div className="app__text">
+            <div className="col-md-6 col-sm-12 col-12">
+              <div className="app__text text-center">
                 <h5>Ứng dụng tiện lợi dành cho người yêu điện ảnh</h5>
                 <p>
                   Không chỉ đặt vé, bạn còn có thể bình luận phim, chấm điểm rạp

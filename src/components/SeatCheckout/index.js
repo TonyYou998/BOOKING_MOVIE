@@ -30,10 +30,11 @@ export default function SeatCheckout(props) {
                 <div className="seat_row">
                     <SeatRow data={data}/>
                     
-
+                 
                 </div>
+
             </div>
-            
+         
         </div>
     )
 }

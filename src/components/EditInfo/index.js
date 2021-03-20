@@ -21,48 +21,28 @@ export default function EditInfo() {
     setOpen(false);
   };
 
-  let [matKhau,setMatKhau]=useState({
-    matKhau:"",
-  })
-  let [email,setEmail]=useState({
-            email:info.email,
-        });
-  let [hoTen,sethoTen]=useState({
-            hoTen:info.hoTen,
-        });
-   let [soDT  ,setSoDt]=useState({
-            soDT:info.soDT,
-        });
-          let [taiKhoan,setTaiKhoan]=useState({
-            taiKhoan:info.taiKhoan,
-        });
-      const handleOnChangeEmail=(e)=>{
-            const {value}=e.target;
-            setEmail(value);
 
-
-        }
+  let [state,setState]=useState(
+    {
+      taiKhoan:info.taiKhoan,
+      matKhau:"",
+      email:info.email,
+      soDT:info.soDT,
+      maNhom:"GP01",
+      maLoaiNguoiDung:info.maLoaiNguoiDung,
+      hoTen:info.hoTen,
       
-    const handleOnChangeHoTen=(e)=>{
-            const {value}=e.target;
-            sethoTen(value);
-        }
-    const handleOnChangeSDT=(e)=>{
-            const {value}=e.target;
-            setSoDt(value);
-        }
-     const handleOnChangeMatKhau=(e)=>{
-            const {value}=e.target;
-            setMatKhau(value);
-        }
-        const handleOnChangeTaiKhoan=(e)=>{
-            const {value}=e.target;
-            setTaiKhoan(value);
-        }
+     
+
+    }
+  );
+
+ 
+     
       const handleChange=(e)=>{
         e.preventDefault();
       
-        dispatch(actChangeInfoApi(hoTen,matKhau,soDT,email,taiKhoan))
+         dispatch(actChangeInfoApi(state,info.accessToken))
       }
   return (
     <div>
@@ -79,8 +59,11 @@ export default function EditInfo() {
                 id="username"
                 label="Username"
                 type="text"
-                onChange={handleOnChangeTaiKhoan}
-                defaultValue={info.taiKhoan}
+                onChange={(e)=>{
+                  setState({...state,taiKhoan:e.target.value})
+
+                }}
+                defaultValue={state.taiKhoan}
                 fullWidth
               />
               <TextField
@@ -89,8 +72,11 @@ export default function EditInfo() {
                 id="name"
                 label="Họ Tên"
                 type="text"
-                onChange={handleOnChangeHoTen}
-                defaultValue={info.hoTen}
+               onChange={(e)=>{
+                  setState({...state,hoTen:e.target.value})
+
+                }}
+                defaultValue={state.hoTen}
                 fullWidth
               />
                 {/* <TextField
@@ -109,8 +95,11 @@ export default function EditInfo() {
                 id="email"
                 label="Email Address"
                 type="email"
-                onChange={handleOnChangeEmail}
-                defaultValue={info.email}
+                onChange={(e)=>{
+                  setState({...state,email:e.target.value})
+
+                }}
+                defaultValue={state.email}
                 fullWidth
               />
               <TextField
@@ -119,8 +108,11 @@ export default function EditInfo() {
                 id="tel"
                 label="Số điện thoại"
                 type="tel"
-                onChange={handleOnChangeSDT}
-                defaultValue={info.soDT}
+                onChange={(e)=>{
+                  setState({...state,soDT:e.target.value})
+
+                }}
+                defaultValue={state.soDT}
                 fullWidth
               />
 

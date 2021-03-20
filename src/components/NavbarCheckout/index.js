@@ -3,7 +3,7 @@ import {Link} from "react-router-dom"
 export default function NavbarCheckout() {
   return (
     <div className="navbar__wrapper">
-       <nav className="navbar navbar-expand-lg navbar-light ">
+       <nav className="navbar navbar-expand-lg navbar-light navbar__checkout ">
           <div className="container-fluid">
          
             <div className="collapse navbar-collapse d-flex " id="navbarNav">

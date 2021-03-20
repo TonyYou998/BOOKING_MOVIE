@@ -13,5 +13,8 @@ export const LIST_CINEMA_SHOWTIME_FAILED="listCinemaShowtimeReducer/LIST_CINEMA_
 export const LIST_MOVIE_ON_CINEMA_REQUEST="listMovieOnCinemaReducer/LIST_MOVIE_ON_CINEMA_REQUEST";
 export const LIST_MOVIE_ON_CINEMA_SUCCESS="listMovieOnCinemaReducer/LIST_MOVIE_ON_CINEMA_SUCCESS";
 export const LIST_MOVIE_ON_CINEMA_FAILED="listMovieOnCinemaReducer/LIST_MOVIE_ON_CINEMA_FAILED";
+export const SEACRH_MOVIE_REQUEST="seacrhMovieReducer/SEACRH_MOVIE_REQUEST";
+export const SEACRH_MOVIE_SUCCESS="seacrhMovieReducer/SEACRH_MOVIE_SUCCESS";
+export const SEACRH_MOVIE_FAILED="seacrhMovieReducer/SEACRH_MOVIE_FAILED";
 
 

@@ -24,7 +24,7 @@ export default function ListMovieWrapper(props) {
   return (
     <div className="movie__wrapper  container" id="carlendar">
           {/* desktop */}
-      <ul className="nav nav-tabs desktop" id="myTab" role="tablist">
+          <ul className="nav nav-tabs desktop" id="myTab" role="tablist">
         <li className="nav-item">
           <a
             className="nav-link active"
@@ -53,8 +53,8 @@ export default function ListMovieWrapper(props) {
         </li>
       </ul>
       
-      <div className="tab-content desktop" id="myTabContent">
-        <div
+         <div className="tab-content desktop" id="myTabContent">
+                <div
           className="tab-pane display__desktop fade show active"
           id="home"
           role="tabpanel"
@@ -62,7 +62,7 @@ export default function ListMovieWrapper(props) {
         >
           <Slider {...settings}>{renderListMovie()}</Slider>
         </div>
-        <div
+                <div
           className="tab-pane  display__desktop fade"
           id="profile"
           role="tabpanel"
@@ -72,11 +72,11 @@ export default function ListMovieWrapper(props) {
         </div>
 
 
-      </div>
+        </div>
         {/* mobile */}
 
-         <ul className="nav nav-tabs" id="myTab" role="tablist">
-        <li className="nav-item">
+         <ul className="nav nav-tabs mobile__display " style={{display:"none"}} id="myTab" role="tablist">
+            <li className="nav-item">
           <a
             className="nav-link active"
             id="home-tab"
@@ -89,7 +89,7 @@ export default function ListMovieWrapper(props) {
             Đang Chiếu
           </a>
         </li>
-        <li className="nav-item">
+            <li className="nav-item">
           <a
             className="nav-link"
             id="profile-tab"
@@ -102,16 +102,19 @@ export default function ListMovieWrapper(props) {
             Sắp Chiếu
           </a>
         </li>
-      </ul>
+        </ul>
 
-        <div className="tab-content" id="myTabContent">
+        <div className="tab-content mobile" id="myTabContent">
         <div
           className="tab-pane display__desktop fade show active"
           id="home__mobile"
           role="tabpanel"
           aria-labelledby="home-tab"
         >
-            <ListMovieMobile/>
+            <ListMovieMobile data={`https://s3img.vcdn.vn/123phim/2021/03/bo-gia-16146819941008.png`} id={5967}/>
+             <ListMovieMobile data={`https://s3img.vcdn.vn/123phim/2021/03/chaos-walking-16158835840511.jpg`} id={5969}/>
+              <ListMovieMobile data={`https://s3img.vcdn.vn/123phim/2021/03/palm-springs-16146820863959.jpg`} id={5970}/>
+             
         </div>
         <div
           className="tab-pane  display__desktop fade"
@@ -119,7 +122,9 @@ export default function ListMovieWrapper(props) {
           role="tabpanel"
           aria-labelledby="profile-tab"
         >
-         2
+          <ListMovieMobile data={`https://s3img.vcdn.vn/123phim/2021/03/bo-gia-16146819941008.png`}/>
+             <ListMovieMobile data={`https://s3img.vcdn.vn/123phim/2021/03/chaos-walking-16158835840511.jpg`}/>
+              <ListMovieMobile data={`https://s3img.vcdn.vn/123phim/2021/03/palm-springs-16146820863959.jpg`}/>
         </div>
 
 

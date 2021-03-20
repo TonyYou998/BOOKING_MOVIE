@@ -88,3 +88,23 @@
         }
     }
 }
+@media screen and (max-width:930px){
+    .detailticket__wrapper{
+        display: none !important;
+    }
+
+    .navbar__checkout{
+        width: 100% !important;
+    }
+   .Checkout__wrapper {
+       width: 100% !important;
+       .seatmap{
+           width: 100% !important;
+           padding-left: 0;
+           .row{width: 100% !important;}
+       }
+   }
+   .lefttittle{
+    padding-left: 0 !important;
+}
+}

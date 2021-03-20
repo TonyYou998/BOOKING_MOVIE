@@ -17,7 +17,7 @@ export const actLoginApi=(taiKhoan,matKhau,history)=>{
             dispatch(actLoginSuccess(result.data));
             
             localStorage.setItem("user",JSON.stringify(result.data));     
-                    
+            
             history.goBack();
            
                
@@ -25,7 +25,7 @@ export const actLoginApi=(taiKhoan,matKhau,history)=>{
         })
         .catch((err)=>{
             dispatch(actLoginFailed(err));
-            console.log(err);
+            alert(err.response.data);
             
 
         })
@@ -80,12 +80,14 @@ const actLoginFailed=(err)=>{
             })
             .then((result)=>{
                     dispatch(actRegSuccess());
-                    history.push("/noti")
+                    alert("đăng ký thành công");
+                    history.push("/noti");
                    
 
             })
             .catch((err)=>{
-               dispatch(actRegFailed(err))
+               dispatch(actRegFailed(err));
+               alert(err.response.data);
             })
 
         }
@@ -142,26 +144,22 @@ const actLoginFailed=(err)=>{
     }
 
 
-    export  const  actChangeInfoApi=(fullName,pass,phone,Email,acc)=>{
-            const info=JSON.parse(localStorage.getItem("user"));
+    export  const  actChangeInfoApi=(data,token)=>{
+           
             
-
+            console.log(token);
     
               
             return (dispatch)=>{
                 dispatch(actchangeInfoRequest());
                 mainAPi
-                .put("/QuanLyNguoiDung/CapNhatThongTinNguoiDung",{
-                    taiKhoan:acc,
-                    matKhau:`${pass.matKhau}`,
-                    email:Email,
-                    soDt:`${phone.soDT}`,
-                    maNhom:"GP01",
-                    maLoaiNguoiDung:"KhachHang",
-                    hoTen:`${fullName.hoTen}`,
-                },{headers: { Authorization: `Bearer ${info.accessToken} `}})
-                .then((data)=>{
-                    console.log("success");
+                .put("/QuanLyNguoiDung/CapNhatThongTinNguoiDung",data,{headers: { Authorization: `Bearer ${token} `}})
+                .then((result)=>{
+                    alert("thay đổi thành công");
+
+                })
+                .catch((err)=>{
+                    alert("lỗi");
 
                 })
 

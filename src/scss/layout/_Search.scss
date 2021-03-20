@@ -1,0 +1,101 @@
+.hometool{
+    display: flex;
+    max-width: 540px;
+    background-color: #fff;
+    margin: auto;
+    height: 80px;
+    position:absolute;
+   
+    bottom:10px;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%,50%);
+    z-index: 2;
+    border-radius: 5px;
+    box-shadow: 0 0 10px ;
+    .searchBox{
+        padding: 20px 5px;
+    //    width: 80%;
+        border:0;
+      
+        position: absolute;
+        top: 6px;
+        font-weight: 500;
+       
+        &:focus{
+            outline: none;
+        }
+      
+    }
+    .showCinema{
+          padding: 20px 5px;
+        height: 100%;
+       
+        border:0;
+       
+        position: absolute;
+        top: 5px;
+        left:210px !important;
+        font-weight: 500;
+       
+        &:focus{
+            outline: none;
+        }
+    }
+    .showDate{
+          padding: 20px 5px;
+        height: 100%;
+       
+        border:0;
+      
+        position: absolute;
+        top: 5px;
+        left:410px !important;
+        font-weight: 500;
+       
+        &:focus{
+            outline: none;
+        }
+    }
+
+
+     .showSession{
+          padding: 20px 5px;
+        height: 100%;
+        
+        border:0;
+       
+        position: absolute;
+        top: 5px;
+        left:610px !important;
+        font-weight: 500;
+       
+        &:focus{
+            outline: none;
+        }
+    }
+    .showButton{
+         padding: 5px 5px;
+        background-color:  #4a4a4a;
+        
+        border:0;
+     
+        position: absolute;
+        top: 20px;
+        left:390px !important;
+        width: 145px;
+       
+        &:focus{
+            outline: none;
+        }
+    }
+    
+    
+}
+
+
+@media screen and (max-width:645px){
+    .hometool{
+        display: none !important;
+    }
+}

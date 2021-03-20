@@ -26,7 +26,7 @@ export const actEditMovieApi=(formData,token)=>{
       mainAPi
       .post("/QuanLyPhim/CapNhatPhimUpload",formData,{headers: { Authorization: `Bearer ${token}` }})
       .then((result)=>{
-          alert(result.data);
+         alert("thay đổi thành công");
 
       })
       .catch((err)=>{

@@ -48,7 +48,7 @@ export default function News(props) {
             </div>
           </div>
         </div>
-        <div className="row">
+        <div className="row small-news__mobile">
           <div className="smallNew__item col-4">
             <img src={news.hinhAnh3} />
             <p class="news__tittle">{news.tieuDe3}</p>

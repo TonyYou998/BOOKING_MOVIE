@@ -1,9 +1,12 @@
+import React from "react";
+import { Link } from "react-router-dom";
 export default function ListMovieMobile(props) {
     
-
+        const {id}=props;
+    
     return (
-        <div className="movie__mobile">
-            <img src="https://s3img.vcdn.vn/123phim/2021/03/bo-gia-16146819941008.png"/>
-        </div>
+        <Link  to={`/detail/${id}`} className="movie__mobile">
+            <img className="my-1" src={props.data}/>
+        </Link>
     )
 }

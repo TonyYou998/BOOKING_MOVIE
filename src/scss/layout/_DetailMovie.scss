@@ -9,3 +9,25 @@
         }
     }
 }
+
+@media screen and (max-width:1140px){
+
+   .detailMovie__content{
+       max-width: none !important;
+       
+     
+   }
+
+    .markCircle{
+        display: none;
+    }
+    .detailMovie__info{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:990px){
+        .detailMovie__listMovie{
+            display: none !important;
+        }
+}

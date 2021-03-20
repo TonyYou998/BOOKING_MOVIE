@@ -51,3 +51,10 @@
   }
   // clear: both;
 }
+
+
+@media screen and (max-width:500px){
+  .small-news__mobile{
+    display: none !important;
+  }
+}

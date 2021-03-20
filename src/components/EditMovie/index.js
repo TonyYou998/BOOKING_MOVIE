@@ -32,6 +32,7 @@ export default function EditMovie(props) {
             ngayKhoiChieu:data.ngayKhoiChieu,
             danhGia:data.danhGia,
             maNhom:"GP01",
+            maPhim:data.maPhim,
         })  
 
       const handleSubmit=(e)=>{
@@ -62,6 +63,18 @@ export default function EditMovie(props) {
                 defaultValue={state.tenPhim}
                 onChange={(e)=>{
                     setState({...state,tenPhim:e.target.value})
+                }}
+                fullWidth
+              />
+              <TextField
+                autoFocus
+                margin="dense"
+                id="maPhim"
+                label="mã phim"
+                type="text"
+                defaultValue={state.tenPhim}
+                onChange={(e)=>{
+                    setState({...state,maPhim:e.target.value})
                 }}
                 fullWidth
               />

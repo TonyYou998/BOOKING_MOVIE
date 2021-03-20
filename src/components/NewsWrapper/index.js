@@ -3,9 +3,9 @@ import News from "../News";
 
 export default function NewsWrapper(props) {
   const renderNews = () => {
-    // console.log(typeof data);
+   
     const { data } = props;
-    // console.log(data);
+  
     if (data && data.length > 0) {
       return <News news={data[0]} />;
     }
@@ -16,7 +16,7 @@ export default function NewsWrapper(props) {
         <div
           class="nav nav-tabs news__wrapper  "
           style={{
-            background: "url(./img/back-news.png)",
+            background: "url(./img/back-news.png)"
           }}
           id="nav-tab"
           role="tablist"
@@ -71,32 +71,8 @@ export default function NewsWrapper(props) {
             <button>XEM THÊM</button>
           </div>
         </div>
-        <div
-          class="tab-pane fade"
-          id="nav-profile"
-          role="tabpanel"
-          aria-labelledby="nav-profile-tab"
-        >
-          {renderNews()}
-          <br />
-          <br />
-          <div className="showmore__button">
-            <button>XEM THÊM</button>
-          </div>
-        </div>
-        <div
-          class="tab-pane fade"
-          id="nav-contact"
-          role="tabpanel"
-          aria-labelledby="nav-contact-tab"
-        >
-          {renderNews()}
-          <br />
-          <br />
-          <div className="showmore__button">
-            <button>XEM THÊM</button>
-          </div>
-        </div>
+        
+     
       </div>
     </div>
   );
