@@ -20,7 +20,7 @@ let gheData=useSelector(state=>state.datVeReducer.data);
                 danhSachVe:listGhe,
                 taiKhoanNguoiDung:info.taiKhoan,
             }
-          console.log(data);
+         
            dispatch(actDatVeApi(data,info.accessToken,history));
          
             

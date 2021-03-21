@@ -112,8 +112,8 @@ export default function ListMovieWrapper(props) {
           aria-labelledby="home-tab"
         >
             <ListMovieMobile data={`https://s3img.vcdn.vn/123phim/2021/03/bo-gia-16146819941008.png`} id={5967}/>
-             <ListMovieMobile data={`https://s3img.vcdn.vn/123phim/2021/03/chaos-walking-16158835840511.jpg`} id={5969}/>
-              <ListMovieMobile data={`https://s3img.vcdn.vn/123phim/2021/03/palm-springs-16146820863959.jpg`} id={5970}/>
+             <ListMovieMobile data={`https://s3img.vcdn.vn/123phim/2021/03/chaos-walking-16158835840511.jpg`} id={6018}/>
+              <ListMovieMobile data={`https://s3img.vcdn.vn/123phim/2021/03/palm-springs-16146820863959.jpg`} id={6019}/>
              
         </div>
         <div

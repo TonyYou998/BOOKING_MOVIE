@@ -12,8 +12,8 @@ export default function SuccessPage(props) {
         <div>
             <div className="jumbotron text-center">
             <h1 className="display-3">Thank You!</h1>
-            <h4 className="display-4">Bạn đã đặt vé thành công</h4>
-            <p className="lead"><strong>Vui lòng kiểm tra email</strong> để nhận được mã vé.</p>
+            <h4 className="display-4">Bạn đã  thực hiện thành công</h4>
+            <p className="lead"><strong>Vui lòng kiểm tra email</strong> để nhận được thông tin chi tiết.</p>
             <hr />
            
             <p className="lead">

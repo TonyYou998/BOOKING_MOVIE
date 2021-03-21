@@ -3,11 +3,11 @@ import * as ActionType from "./constants";
 import {mainAPi} from "../../../../api";
 
 export const actLoginApi=(taiKhoan,matKhau,history)=>{
-   console.log(taiKhoan);
+
     return (dispatch)=>{
 
         dispatch(actLoginRequest());
-          console.log("run login reducer");
+       
         mainAPi
         .post("/QuanLyNguoiDung/DangNhap",{
             taiKhoan,
@@ -86,30 +86,25 @@ const actLoginFailed=(err)=>{
     }
 
 
-  export   const actAddUser=(taiKhoan,matKhau,email,soDt,hoTen,history,token)=>{
-        console.log(taiKhoan,matKhau,email,soDt,hoTen,token);
+  export   const actAddUser=(state,history,token)=>{
+        console.log(state);
              return (dispatch)=>{
             dispatch(actRegRequest());
+            
             mainAPi
-            .post("/QuanLyNguoiDung/ThemNguoiDung",{
-                taiKhoan,
-                matKhau,
-                email,
-                soDt,
-                maNhom: "GP01",
-                maLoaiNguoiDung: "QuanTri",
-                hoTen,
-            },{  
+            .post("/QuanLyNguoiDung/ThemNguoiDung",state,{  
             headers: { Authorization: `Bearer ${token}` }
         })
             .then((result)=>{
+
                     dispatch(actRegSuccess());
                     history.push("/noti")
                    
 
             })
             .catch((err)=>{
-               dispatch(actRegFailed())
+               dispatch(actRegFailed());
+               alert(err.response.data);
             })
 
         }

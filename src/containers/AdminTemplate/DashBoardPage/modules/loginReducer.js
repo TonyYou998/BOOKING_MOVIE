@@ -15,8 +15,7 @@ const loginReducer= (state = initialState, action) => {
         state.loading=true;
         return { ...state}
     case ActionType.LOGIN_SUCCESS:
-      
-        console.log("run reducer");
+     
         state.data=action.payload;
         state.err=false;
         state.loading=null;
