@@ -13,3 +13,8 @@ export const CHANGE_INFO_REQUEST="changeInfoReducer/CHANGE_INFO_REQUEST";
 export const CHANGE_INFO_SUCCESS="changeInfoReducer/CHANGE_INFO_SUCCESS";
 export const CHANGE_INFO_FAILED="changeInfoReducer/CHANGE_INFO_FAILED";
 
+export const DETAIL_INFO_REQUEST="detailInfoReducer/DETAIL_INFO_REQUEST";
+export const DETAIL_INFO_SUCCESS="detailInfoReducer/DETAIL_INFO_SUCCESS";
+export const DETAIL_INFO_FAILED="detailInfoReducer/DETAIL_INFO_FAILED";
+
+

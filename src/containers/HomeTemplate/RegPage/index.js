@@ -70,7 +70,7 @@ export default function RegPage(props) {
                     <span className="input-group-text"> <i className="fa fa-lock" /> </span>
                 </div>
                 <input name="matKhau" onChange={(e)=>{
-                    setState({...state,taiKhoan:e.target.value})
+                    setState({...state,matKhau:e.target.value})
 
                 }} className="form-control" placeholder="Mật Khẩu" type="password" />
                 </div>

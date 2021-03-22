@@ -14,7 +14,6 @@ import { Demo } from "../../../components/demo";
 import TrailerModal from "../../../components/TrailerModal";
 
 
-// import { Link } from "react-router-dom";
  function DetailMoviePage(props) {
   let {id} = useParams();
   const listMovieData=useSelector(state=>state.listMovieReducer.data);

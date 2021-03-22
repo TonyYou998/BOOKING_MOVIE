@@ -13,13 +13,13 @@ export default function ListMovieWrapper(props) {
     }
   };
   var settings = {
-    dots: 0,
-    infinite: 0,
+    dots: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 4,
     rows: 2,
     slidesToScroll: 4,
-    draggable: false,
+    // draggable: false,
   };
   return (
     <div className="movie__wrapper  container" id="carlendar">

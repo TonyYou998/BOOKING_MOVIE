@@ -13,6 +13,7 @@ import loginReducer from "../../containers/AdminTemplate/DashBoardPage/modules/l
 import historyReducer from "../../containers/AdminTemplate/HistoryPage/Modules/reducer";
 import listUserReducer from "../../containers/AdminTemplate/RemovePage/Modules/reducer";
 import searchMovieReducer from "../../containers/HomeTemplate/HomePage/modules/SearchMovieReducer";
+import detailInfoReducer from "../../containers/AdminTemplate/DashBoardPage/modules/detailInfoReducer";
 const rootReducer = combineReducers({
   listMovieReducer,
   NewReducers,
@@ -28,5 +29,6 @@ const rootReducer = combineReducers({
   historyReducer,
   listUserReducer,
  searchMovieReducer,
+ detailInfoReducer,
 });
 export default rootReducer;

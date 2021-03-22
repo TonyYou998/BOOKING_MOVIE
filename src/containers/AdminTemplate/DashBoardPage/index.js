@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import { useDispatch } from "react-redux";
 import { Redirect, useHistory } from "react-router";
 import EditInfo from "../../../components/EditInfo";
@@ -6,6 +6,7 @@ import { actLogout } from "./modules/action";
 export default function Dashboard(props) {
     let dispatch=useDispatch();
     let history=useHistory();
+  
     const info=JSON.parse(localStorage.getItem("user"));
     if(!localStorage.getItem("user"))
         return <Redirect to="/login"/>

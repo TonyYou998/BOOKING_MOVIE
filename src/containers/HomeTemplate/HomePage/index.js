@@ -9,16 +9,18 @@ import Footer from "../../../components/footer";
 import TimeTable from "../../../components/TimeTable";
 import Search from "../../../components/search";
 
+
 function HomePage(props) {
   useEffect(() => {
     props.fetchListMovie();
     props.fetchNew();
   }, []);
+      const { data } = props;
     const renderSearch=()=>{
         return <Search/>
     }
   const renderCarousel = () => {
-    const { data } = props;
+
     
     let arrHinhAnh = [];
     let arrMaPhim=[];
@@ -54,11 +56,13 @@ function HomePage(props) {
   const renderTimeTable=()=>{
     return <TimeTable/>
   }
+  
 
   return (
     <div>
       <div>{renderCarousel()}</div>
       <div>{renderSearch()}</div>
+      
       <div>{renderListMovieWrapper()}</div>
       {/* <div>{renderTimeTable()}</div> */}
       <div>{renderNews()}</div>

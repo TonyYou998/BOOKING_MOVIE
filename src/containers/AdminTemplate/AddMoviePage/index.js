@@ -79,7 +79,7 @@ export default function AddMoviePage(props) {
                         <span className="input-group-text"> <i className="fa fa-envelope" /> </span>
                     </div>
                     <input name="biDanh"  className="form-control" placeholder="Bí danh" type="text" onChange={(e)=>{
-                            // setBiDanh(e.target.value);
+                           
                              setState({...state,biDanh:e.target.value});
                             
                     }} />
@@ -91,7 +91,7 @@ export default function AddMoviePage(props) {
                         <span className="input-group-text"> <i className="fa fa-envelope" /> </span>
                     </div>
                     <input name="trailer"  className="form-control" placeholder="Trailer" type="text" onChange={(e)=>{
-                        // setTrailer(e.target.value);
+                       
                         setState({...state,trailer:e.target.value});
 
                     }} />
@@ -103,7 +103,7 @@ export default function AddMoviePage(props) {
                         <span className="input-group-text"> <i className="fa fa-envelope" /> </span>
                     </div>
                     <input name="hinhAnh"  className="form-control" placeholder="hinhAnh" type="file" onChange={(e)=>{
-                        // setHinhAnh({ hinhAnh: e.target.files[0]})
+                      
                         setState({...state,
                             hinhAnh:e.target.files[0]
                         });
@@ -118,7 +118,7 @@ export default function AddMoviePage(props) {
                     </div>
                     <input name="moTa"  className="form-control" placeholder="Mô tả" type="text" onChange={
                         (e)=>{
-                            // setMoTa(e.target.value);
+                           
                             setState({...state,moTa:e.target.value});
                         }
                     } />

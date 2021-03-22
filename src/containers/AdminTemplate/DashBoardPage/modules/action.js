@@ -134,19 +134,21 @@ const actLoginFailed=(err)=>{
     export  const  actChangeInfoApi=(data,token)=>{
            
             
-            console.log(token);
-    
+         
+                console.log(data);
               
             return (dispatch)=>{
                 dispatch(actchangeInfoRequest());
                 mainAPi
                 .put("/QuanLyNguoiDung/CapNhatThongTinNguoiDung",data,{headers: { Authorization: `Bearer ${token} `}})
                 .then((result)=>{
-                    alert("thay đổi thành công");
 
+                 
+                    alert("thay đổi thành công");
+                   
                 })
                 .catch((err)=>{
-                    alert("lỗi");
+                    alert(err.response.data);
 
                 })
 
@@ -168,6 +170,46 @@ const actLoginFailed=(err)=>{
     const actChangeInfoFailed=(err)=>{
         return {
             type:ActionType.CHANGE_INFO_FAILED,
+            payload:err,
+        }
+
+    }
+
+    // detai info
+
+
+    export const actDetailInfoApi=(taiKhoan)=>{
+     
+        return (dispatch)=>{
+            dispatch(actDetailInfoRequest());
+            mainAPi
+            .post("/QuanLyNguoiDung/ThongTinTaiKhoan",{taiKhoan})
+            .then((result)=>{
+                dispatch(actDetailInfoSuccess(result.data));
+
+            })
+            .catch((err)=>{
+                console.log(err);
+
+            })
+        }
+
+    }
+    const actDetailInfoRequest=()=>{
+        return {
+            type:ActionType.DETAIL_INFO_REQUEST,
+        }
+    }
+
+    const actDetailInfoSuccess=(data)=>{
+        return {
+            type:ActionType.DETAIL_INFO_SUCCESS,
+            payload:data,
+        }
+    }
+    const actDetailInfoFailed=(err)=>{
+        return {
+            type:ActionType.DETAIL_INFO_FAILED,
             payload:err,
         }
 

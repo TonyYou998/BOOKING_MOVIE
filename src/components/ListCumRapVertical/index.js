@@ -85,7 +85,7 @@ export default function ListCumRapVertical(props) {
         if(data)  {
             
             return data.map((item,index)=>{
-                console.log(item);
+            
                     return(
                         <Link to={`/checkout/${item.maLichChieu}`} className="btn btn-success m-1" style={{fontSize:"12px",width:"90%"}}>
                             {item.ngayChieuGioChieu}

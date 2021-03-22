@@ -21,7 +21,7 @@ export const actAddMovieApi=(formData)=>{
 //edit phim
 export const actEditMovieApi=(formData,token)=>{
     
-    console.log(formData.get("hinhAnh"));
+   
   return (dispatch)=>{
       mainAPi
       .post("/QuanLyPhim/CapNhatPhimUpload",formData,{headers: { Authorization: `Bearer ${token}` }})
@@ -30,7 +30,7 @@ export const actEditMovieApi=(formData,token)=>{
 
       })
       .catch((err)=>{
-           alert("lỗi");
+           alert(err.response.data);
 
       })
 
