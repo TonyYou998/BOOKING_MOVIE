@@ -28,6 +28,7 @@
             height: 500px;
         }
         .button_mobile{
+            display: none;
             width: 100%;
             a{
                   width: 80%;
@@ -37,4 +38,9 @@
         }
     }
 
+}
+@media screen and (max-width:930px){
+     .button_mobile{
+         display: block !important;
+     }
 }
