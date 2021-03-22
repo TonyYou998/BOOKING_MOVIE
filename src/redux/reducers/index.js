@@ -17,7 +17,6 @@ import detailInfoReducer from "../../containers/AdminTemplate/DashBoardPage/modu
 const rootReducer = combineReducers({
   listMovieReducer,
   NewReducers,
- 
   DetailMovieReducer,
   listCinemaReducer,
   listCinemaShowtimeReducer,

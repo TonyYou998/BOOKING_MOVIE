@@ -6,12 +6,7 @@ import HomeTemplate from "./containers/HomeTemplate";
 import CheckOutTemplate from "./containers/CheckOutTemplate";
 import { connect } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
-import DemoHooks from "./HOOKS";
 
-import ChildUserCallBack from "./HOOKS/ChildUserCallBack";
-import DemoHooksUserCallBack from "./HOOKS/DemoHooksUserCallBAck";
-import DemoHooksUseMemo from "./HOOKS/DemoHooksUseMemo";
-import BTGameBauCua from "./baucua/btgamebaucua";
 import AdminTemplate from "./containers/AdminTemplate";
 import InformTemplate from "./containers/InformTemplate";
 
@@ -85,12 +80,9 @@ export default class App extends Component {
         </Switch>
 
       </BrowserRouter>
-      // <DemoHooks />
-      // <BTGameBauCua />
-      // <DemoHooksUserCallBack />
-      // <DemoHooksUseMemo />
+     
     );
   }
 }
 
-// export default App;
+
