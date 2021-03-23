@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
-import Carousel from "../../../components/Carousel";
+import Carousel from "../HomePage/Components/Carousel";
 import { actNewApi, actListMovieApi } from "../HomePage/modules/action";
 import { connect } from "react-redux";
-import NewsWrapper from "../../../components/NewsWrapper";
-import ListMovieWrapper from "../../../components/ListMovieWrapper";
-import App from "../../../components/app";
-import Footer from "../../../components/footer";
+import NewsWrapper from "./Components/NewsWrapper";
+import ListMovieWrapper from "./Components/ListMovieWrapper";
+import App from "./Components/app";
+import Footer from "./Components/footer";
 import TimeTable from "../../../components/TimeTable";
-import Search from "../../../components/search";
+import Search from "../HomePage/Components/search";
 
 
 function HomePage(props) {

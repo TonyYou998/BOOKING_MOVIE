@@ -1,5 +1,5 @@
 import React from "react";
-import News from "../News";
+import News from "../../../HomePage/Components/News";
 
 export default function NewsWrapper(props) {
   const renderNews = () => {

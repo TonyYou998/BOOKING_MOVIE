@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import ListMovie from "../ListMovie"
+import ListMovie from "../../../../../components/ListMovie";
 export function ListMovieRecommend(props) {
     
    const settings = {

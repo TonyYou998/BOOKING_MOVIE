@@ -1,9 +1,11 @@
+import * as ActionType from "./constants";
 const initialState = {
-    data:null
+    data:null,
+    err:null,
 }
 
-export default (state = initialState, { type, payload }) => {
-    switch (type) {
+export default (state = initialState, actiion) => {
+    switch (actiion.type) {
 
     case typeName:
         return { ...state, ...payload }

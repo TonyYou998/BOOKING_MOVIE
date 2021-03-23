@@ -1,16 +1,16 @@
 import React,{useEffect} from "react";
-import Info from "../../../components/DetailMovie__Info";
-import ShowTimeModal from "../../../components/DetailMovie__ShowTime";
+import Info from "./Components/DetailMovie__Info";
+import ShowTimeModal from "./Components/DetailMovie__ShowTime"; 
 import { useParams } from "react-router-dom";
 
 import {connect } from "react-redux";
 import { actDetailMovieApi } from "./Modules/action";
 import Loader from "../../../components/Loading";
-import ListMovieWrapper from "../../../components/ListMovieWrapper";
+
 import {actListMovieApi} from "../HomePage/modules/action";
 import {useSelector,useDispatch} from "react-redux";
-import { ListMovieRecommend } from "../../../components/ListMovieRecommend";
-import { Demo } from "../../../components/demo";
+import { ListMovieRecommend } from "./Components/ListMovieRecommend";
+
 import TrailerModal from "../../../components/TrailerModal";
 
 
@@ -58,7 +58,7 @@ return <Loader/>
       <div> {renderDetailMovieInfo()}</div>
      
       <div className="detailMovie__listMovie">{renderListMovie()}</div>
-      {/* <div>{renderDemo()}</div> */}
+     
       
      
       

@@ -1,6 +1,6 @@
 import React from "react";
 import {useSelector,useDispatch} from "react-redux";
-import {actRequestGhe} from "../../containers/CheckOutTemplate/CheckOutPage/Modules/action";
+import {actRequestGhe} from "../../Modules/action";
 export default function Seat(props) {
     const {data}=props;
     const {css}=props;

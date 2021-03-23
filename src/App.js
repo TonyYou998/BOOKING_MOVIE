@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Route, Switch, withRouter } from "react-router-dom";
 import { routesCheckout, routesHome,routesAdmin,routesInform } from "./routes";
-import Carousel from "./components/Carousel";
+// import Carousel from "./components/Carousel";
 import HomeTemplate from "./containers/HomeTemplate";
 import CheckOutTemplate from "./containers/CheckOutTemplate";
 import { connect } from "react-redux";
@@ -9,6 +9,7 @@ import { BrowserRouter } from "react-router-dom";
 
 import AdminTemplate from "./containers/AdminTemplate";
 import InformTemplate from "./containers/InformTemplate";
+import PageNotFound from "./containers/PageNotFound";
 
 export default class App extends Component {
   showLayoutHome = (routes) => {
@@ -77,6 +78,7 @@ export default class App extends Component {
           {this.showLayoutCheckout(routesCheckout)}
           {this.ShowLayoutAdmin(routesAdmin)}
           {this.ShowLayoutInform(routesInform)}
+            <Route path="" component={PageNotFound} />
         </Switch>
 
       </BrowserRouter>

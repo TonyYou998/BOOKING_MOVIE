@@ -2,7 +2,7 @@ import { data } from "jquery";
 import React from "react";
 import {useDispatch, useSelector} from "react-redux";
 import { useHistory, useParams } from "react-router";
-import {actDatVeApi} from "../../containers/CheckOutTemplate/CheckOutPage/Modules/action";
+import {actDatVeApi} from "../../Modules/action";
 export default function DetailTicket(props) {
     let history=useHistory();
     let {id}=useParams();

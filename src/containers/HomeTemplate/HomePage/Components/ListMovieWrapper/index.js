@@ -1,5 +1,5 @@
 import React from "react";
-import ListMovie from "../ListMovie";
+import ListMovie from "../../../../../components/ListMovie";
 import Slider from "react-slick";
 import ListMovieMobile from "../ListMovieMobile";
 export default function ListMovieWrapper(props) {

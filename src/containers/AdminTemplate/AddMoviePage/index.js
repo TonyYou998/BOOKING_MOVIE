@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router";
 import {actAddMovieApi, actDeleteMovieApi} from "./modules/action";
 import {actListMovieApi} from "../../HomeTemplate/HomePage/modules/action";
-import EditMovie from "../../../components/EditMovie";
+import EditMovie from "./Components/EditMovie";
 export default function AddMoviePage(props) {
      let info=JSON.parse(localStorage.getItem("user"));
         let [state,setState]=useState({

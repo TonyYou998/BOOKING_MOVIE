@@ -1,9 +1,9 @@
     import React,{useEffect} from "react";
-    import SeatCheckout from "../../../components/SeatCheckout";
+    import SeatCheckout from "./Components/SeatCheckout";
     import {useParams} from "react-router-dom";
-    import {actListGheApi} from "./Modules/action";
+    import {actListGheApi} from "../CheckOutPage/Modules/action";
     import {useDispatch,useSelector} from "react-redux";
-    import DetailTicket from "../../../components/DetaiTicket";
+    import DetailTicket from "./Components/DetaiTicket";
     export default function CheckOutPage(props) {
         let {id} =useParams();
         const dispatch=useDispatch();
@@ -17,6 +17,7 @@
             <div className="d-flex" >
             
                 <SeatCheckout data={listGheData}/>
+                
                 <DetailTicket/>
             </div>
         )

@@ -10,7 +10,7 @@ import AddMemPage from "../containers/AdminTemplate/AddMemPage";
 import RemovePage from "../containers/AdminTemplate/RemovePage";
 import AddMoviePage from "../containers/AdminTemplate/AddMoviePage";
 import RegShowTime from "../containers/AdminTemplate/regshowtime";
-import CheckOutMobile from "../components/checkoutmobile";
+import CheckOutMobile from "../containers/CheckOutTemplate/CheckOutPage/Components/checkoutmobile";
 const routesHome = [
   {
     exact: true,

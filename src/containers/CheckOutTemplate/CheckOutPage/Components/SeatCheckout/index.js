@@ -1,5 +1,6 @@
 import React from "react";
 import SeatRow from "../SeatRow";
+
 import {Link, useParams} from "react-router-dom";
 export default function SeatCheckout(props) {
     const {data}=props;

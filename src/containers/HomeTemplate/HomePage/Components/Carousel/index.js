@@ -1,6 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import TrailerModal from "../TrailerModal";
+import TrailerModal from "../../../../../components/TrailerModal";
 export default function Carousel(props) {
   const { arrMovie,arrCode } = props;
   

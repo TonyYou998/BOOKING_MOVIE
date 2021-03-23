@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector,useDispatch } from "react-redux";
 import { useHistory, useParams } from "react-router";
 
-import {actDatVeApi} from "../../containers/CheckOutTemplate/CheckOutPage/Modules/action";
+import {actDatVeApi} from "../../Modules/action";
 
 export default function CheckOutMobile(props) {
     let history=useHistory();

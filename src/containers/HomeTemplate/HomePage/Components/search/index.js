@@ -3,7 +3,8 @@ import { Fragment } from "react";
 import { useState } from "react";
 import { useDispatch ,useSelector} from "react-redux";
 import { useHistory } from "react-router";
-import { actSeachMovieApi } from "../../containers/HomeTemplate/HomePage/modules/action";
+
+import {actSeachMovieApi} from "../../modules/action";
 export default function Search(props) {
     let [state,setState]=useState({
         keyWork:"",

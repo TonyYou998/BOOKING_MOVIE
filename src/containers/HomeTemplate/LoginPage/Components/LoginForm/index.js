@@ -1,6 +1,7 @@
 import React,{useState} from "react";
 import {useDispatch} from "react-redux";
-import {actLoginApi} from "../../containers/AdminTemplate/DashBoardPage/modules/action";
+
+import {actLoginApi} from "../../../../../containers/AdminTemplate/DashBoardPage/modules/action";
 import {useHistory,Redirect} from "react-router-dom";
 import {Link} from "react-router-dom";
 

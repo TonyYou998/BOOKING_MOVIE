@@ -8,10 +8,10 @@ import MuiDialogActions from '@material-ui/core/DialogActions';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import Typography from '@material-ui/core/Typography';
-import ShowTime from '../ShowTime';
+import ShowTime from "../ShowTime";
 import {useParams} from "react-router-dom";
 import {useDispatch,useSelector} from "react-redux";
-import { actGetListDateTimeApi} from "../../containers/HomeTemplate/DetaiMovie/Modules/action"
+import { actGetListDateTimeApi} from "../../Modules/action"
 
 
 
