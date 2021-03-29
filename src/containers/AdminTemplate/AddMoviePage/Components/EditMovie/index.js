@@ -45,7 +45,10 @@ export default function EditMovie(props) {
           dispatch(actEditMovieApi(form_data,info.accessToken));
 
       }
+     
       
+    
+  
   return (
     <div>
       <button className="btn btn-success mt-1" onClick={handleClickOpen} style={{width:"80px"}}>
@@ -116,7 +119,10 @@ export default function EditMovie(props) {
                  onChange={(e)=>{
                     setState({...state,ngayKhoiChieu:e.target.value})
                 }}
-                defaultValue={state.ngayKhoiChieu}
+                defaultValue={
+                  state.ngayKhoiChieu.slice(0,10)
+
+                }
                 fullWidth
               />
                 <TextField
