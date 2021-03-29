@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Route, Switch, withRouter } from "react-router-dom";
 import { routesCheckout, routesHome,routesAdmin,routesInform } from "./routes";
-// import Carousel from "./components/Carousel";
+
 import HomeTemplate from "./containers/HomeTemplate";
 import CheckOutTemplate from "./containers/CheckOutTemplate";
 import { connect } from "react-redux";

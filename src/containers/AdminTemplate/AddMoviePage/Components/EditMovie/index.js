@@ -45,7 +45,7 @@ export default function EditMovie(props) {
           dispatch(actEditMovieApi(form_data,info.accessToken));
 
       }
-      console.log(state);
+      
   return (
     <div>
       <button className="btn btn-success mt-1" onClick={handleClickOpen} style={{width:"80px"}}>

@@ -3,7 +3,7 @@ import * as ActionType from "./constants";
 import {mainAPi} from "../../../../api";
 
 export const actLoginApi=(taiKhoan,matKhau,history)=>{
-
+        const TimeExp=300000;
     return (dispatch)=>{
 
         dispatch(actLoginRequest());
@@ -13,11 +13,17 @@ export const actLoginApi=(taiKhoan,matKhau,history)=>{
             taiKhoan,
             matKhau,
         })
+
+        
+
         .then((result)=>{
             dispatch(actLoginSuccess(result.data));
             
             localStorage.setItem("user",JSON.stringify(result.data));     
-            
+            const date=new Date().getTime();
+            const exp=date+TimeExp;
+            localStorage.setItem("exp",exp);
+            dispatch(actTimeOutLogout(history,TimeExp));
             history.goBack();
            
                
@@ -55,8 +61,9 @@ const actLoginFailed=(err)=>{
 
 }
  export const actLogout=(history)=>{
-            console.log("run out");
+          
         localStorage.removeItem("user");
+        localStorage.removeItem("exp");
         history.replace("/home");
         return {
             type:ActionType.LOGIN_CLEAR_DATA,
@@ -87,7 +94,7 @@ const actLoginFailed=(err)=>{
 
 
   export   const actAddUser=(state,history,token)=>{
-        console.log(state);
+
              return (dispatch)=>{
             dispatch(actRegRequest());
             
@@ -212,5 +219,18 @@ const actLoginFailed=(err)=>{
             type:ActionType.DETAIL_INFO_FAILED,
             payload:err,
         }
+
+    }
+
+    const actTimeOutLogout=(history,exp)=>{
+        return (dispatch)=>{
+            setTimeout(()=>{
+                dispatch(actLogout(history));
+
+            },exp);
+
+        }
+
+
 
     }

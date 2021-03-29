@@ -58,7 +58,7 @@ const showTenGhe=(data)=>{
                
                 <td>{item.maVe}</td>
                 <td>{item.tenPhim}</td>
-                <td>{item.ngayDat}</td>
+                <td> {item.ngayDat.slice(11,15)} {item.ngayDat.slice(0,9)}</td>
                 <td>{item.giaVe}</td>
             </tr>
         )

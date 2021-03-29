@@ -88,7 +88,7 @@ export default function ListCumRapVertical(props) {
             
                     return(
                         <Link to={`/checkout/${item.maLichChieu}`} className="btn btn-success m-1" style={{fontSize:"12px",width:"90%"}}>
-                            {item.ngayChieuGioChieu}
+                            {item.ngayChieuGioChieu.slice(11,16)}
                         </Link>
                     )
 
