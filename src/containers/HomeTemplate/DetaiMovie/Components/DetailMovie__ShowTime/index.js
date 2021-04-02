@@ -79,7 +79,7 @@ const [open, setOpen] = React.useState(false);
   return (
     <div>
     
-      <button className="btn btn-success" onClick={()=>{
+      <button className="btn btn-success ticket__button" onClick={()=>{
         handleClickOpen();
         fetchData();
       }}> Mua Vé</button>

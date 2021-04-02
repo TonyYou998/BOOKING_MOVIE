@@ -12,6 +12,7 @@ import {useSelector,useDispatch} from "react-redux";
 import { ListMovieRecommend } from "./Components/ListMovieRecommend";
 
 import TrailerModal from "../../../components/TrailerModal";
+import Footer from "../HomePage/Components/footer";
 
 
  function DetailMoviePage(props) {
@@ -48,17 +49,17 @@ return <Loader/>
    
    return <ShowTimeModal data={listShowTimeData}/>
  }
- const renderDemo=()=>{
-   return <TrailerModal/>
+
+ const renderFooter=()=>{
+   return <Footer/>
  }
- 
   return (
     <div>
 
       <div> {renderDetailMovieInfo()}</div>
      
       <div className="detailMovie__listMovie">{renderListMovie()}</div>
-     
+    
       
      
       

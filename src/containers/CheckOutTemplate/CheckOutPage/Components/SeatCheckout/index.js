@@ -5,7 +5,11 @@ import {Link, useParams} from "react-router-dom";
 export default function SeatCheckout(props) {
     const {data}=props;
     const {id}=useParams();
-   
+   const TimeOut=()=>{
+       setTimeout(()=>{
+
+       },300000)
+   }
     return (
         <div className="Checkout__wrapper">
             

@@ -49,9 +49,10 @@ const DialogActions = withStyles((theme) => ({
   },
 }))(MuiDialogActions);
 
-export default function TrailerModal() {
+export default function TrailerModal(props) {
   const [open, setOpen] = React.useState(false);
-
+  const {movie}=props;
+ 
   const handleClickOpen = () => {
     setOpen(true);
   };
@@ -65,7 +66,7 @@ export default function TrailerModal() {
       <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
         
         <DialogContent dividers>
-         <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZfuNTqbHE8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+         <iframe width="560" height="315" src={movie && movie.trailer} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </DialogContent>
         <DialogActions>
           

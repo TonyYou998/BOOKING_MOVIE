@@ -28,7 +28,7 @@ function HomePage(props) {
       
       data.forEach((item, index) => {
       
-        if (index === 0 || index === 1 || index === 2){
+        if (index === 18 || index === 19 || index === 20){
           arrHinhAnh.push(item.hinhAnh);
           arrMaPhim.push(item.maPhim);
         } 

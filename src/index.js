@@ -10,7 +10,7 @@ import "popper.js/dist/umd/popper.min.js";
 import "font-awesome/css/font-awesome.min.css";
 
 import { BrowserRouter } from "react-router-dom";
-import "./scss/main.scss";
+
 
 import { createStore, applyMiddleware, compose } from "redux";
 import { Provider } from "react-redux";

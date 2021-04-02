@@ -23,7 +23,7 @@ const renderButton=()=>{
   
   return (
     <div className="detailMovie__wrapper">
-      
+     
         
         <div
           style={{
@@ -33,6 +33,7 @@ const renderButton=()=>{
             margin: "0 auto",
           }}
         >
+        
           <div className="row detailMovie__conatiner">
             <div className="col-8 detailMovie__content row">
               

@@ -31,7 +31,7 @@ export default function EditMovie(props) {
             moTa:data.moTa,
             ngayKhoiChieu:data.ngayKhoiChieu,
             danhGia:data.danhGia,
-            maNhom:"GP01",
+            maNhom:"GP02",
             maPhim:data.maPhim,
         })  
 

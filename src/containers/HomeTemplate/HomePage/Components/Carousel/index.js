@@ -78,7 +78,7 @@ export default function Carousel(props) {
             role="button"
             data-slide="prev"
           >
-            <span className="carousel-control-prev-icon" aria-hidden="true" />
+            <span className="carousel-control-prev-icon" style={{backgroundImage:"url(https://tix.vn/app/assets/img/icons/back-session.png)",height:"100px",width:"50px"}} aria-hidden="true" />
             <span className="sr-only">Previous</span>
           </a>
           <a
@@ -87,7 +87,7 @@ export default function Carousel(props) {
             role="button"
             data-slide="next"
           >
-            <span className="carousel-control-next-icon" aria-hidden="true" />
+            <span className="carousel-control-next-icon"style={{backgroundImage:"url(https://tix.vn/app/assets/img/icons/next-session.png)",height:"100px",width:"50px"}}  aria-hidden="true" />
             <span className="sr-only">Next</span>
           </a>
         </div>

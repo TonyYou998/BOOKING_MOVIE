@@ -14,7 +14,7 @@ export default function AddMoviePage(props) {
             moTa:"",
             ngayKhoiChieu:"",
             danhGia:"",
-            maNhom:"GP01",
+            maNhom:"GP02",
         })
         let dispatch=useDispatch();
         useEffect(()=>{
