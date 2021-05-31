@@ -4,7 +4,7 @@ import { routesCheckout, routesHome,routesAdmin,routesInform } from "./routes";
 
 import HomeTemplate from "./containers/HomeTemplate";
 import CheckOutTemplate from "./containers/CheckOutTemplate";
-import { connect } from "react-redux";
+
 import { BrowserRouter } from "react-router-dom";
 
 import AdminTemplate from "./containers/AdminTemplate";

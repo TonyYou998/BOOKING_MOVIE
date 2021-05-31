@@ -1,20 +1,30 @@
 .header {
-	padding: 5px 0;
-	background-color: rgba(255, 255, 255, 0.95);
+	padding: 15px 0;
+	// background-color: rgba(255, 255, 255, 0.322);
+	background-color: transparent;
 	font-size: 0.9rem;
 	font-weight: 500;
 	position: fixed;
 	z-index: 1000;
 	width: 100%;
-	box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+	
+	// border-bottom: 1px solid rgba(255, 255, 255, 0.377);
+	
+	// box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+
 	.row{
 		width: 100% !important;
 	}
 	.header__logo {
+		
+		&:hover a{
+			text-decoration: none !important;
+		}
 		img {
 			height: 50px;
 			width: 50px;
 			display: block;
+			border-radius: 10px;
 		}
 		padding-left: 20px;
 	}
@@ -24,13 +34,13 @@
 			list-style: none;
 			padding-top: 15px;
 			li a {
-				color: black;
+				color: white;
 				transition: all ease 0.3s;
 				&:hover {
 					text-decoration: none;
 					color: #fb4226;
 				}
-				margin-right: 15px;
+				margin: 0 30px;
 			}
 		}
 	}
@@ -71,8 +81,13 @@
 	}
 }
 
-
-
+.active__navbar{
+	background-color: #121a36fd !important;
+	border-bottom: none !important;
+}
+.transition{
+	transition: all .3s ease-in-out;
+}
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
 	background-color: transparent !important;
@@ -117,4 +132,7 @@
 		// width: 100% !important;
 	}
 
+}
+.nav{
+	padding-left: 0 !important;
 }

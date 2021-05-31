@@ -19,7 +19,7 @@ export default function AddMemPage(props) {
            
         })
        
-     
+    
        const handleReg=(e)=>{
            e.preventDefault();
             let info=JSON.parse(localStorage.getItem("user"));

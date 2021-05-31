@@ -1,4 +1,7 @@
 
+.detail__wrapper{
+    background-color: #001232;
+}
 .detailMovie__wrapper{
    
    background-color:#212529; 
@@ -16,18 +19,20 @@
 }
 
 .ticket__button{
-    font-size: 16px !important;
-    border-radius: 4px !important;
-    padding: 7px 25px !important;
-    background-color:  #fb4226 !important;
-    //   outline: none !important;
-   
+    
+    font-size: 1rem;
+    text-align: center;
+    color: white;
+    padding:.4rem 3rem .6rem;
+    border-radius: 30px;
+    border: none;
+    background: -webkit-linear-gradient(
+        169deg
+        , #5560ff 0%, #ff4343 100%);
+
     &:hover{
-        background-color:  #b42a14 !important;
-    }
-    &:focus{
-        outline: none !important;
-        box-shadow: none !important;
+      box-shadow: 0px 10px 15px 0px rgb(59,55,188);
+      transition: all .4s ease-in-out;
     }
 }
 

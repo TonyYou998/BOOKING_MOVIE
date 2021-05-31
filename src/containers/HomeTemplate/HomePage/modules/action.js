@@ -119,7 +119,7 @@ export const actListCinemaShowtimeApi=(id)=>{
    
     mainAPi
     // .get(`/QuanLyRap/LayThongTinCumRapTheoHeThong?maHeThongRap=${id}`)
-    .get(`/QuanLyRap/LayThongTinLichChieuHeThongRap?maHeThongRap=${id}&maNhom=GP01`)
+    .get(`/QuanLyRap/LayThongTinLichChieuHeThongRap?maHeThongRap=${id}&maNhom=GP02`)
     .then((result)=>{
       
       dispatch(actListCinemaShowtimeSuccess(result.data));
@@ -160,7 +160,7 @@ export  const actListMovieOnCinemaApi=(id)=>{
     
     dispatch(actListMovieOnCinemaRequest());
     mainAPi
-    .get(`/QuanLyRap/LayThongTinLichChieuHeThongRap?maHeThongRap=${id}&maNhom=GP01`)
+    .get(`/QuanLyRap/LayThongTinLichChieuHeThongRap?maHeThongRap=${id}&maNhom=GP02`)
     .then((result)=>{
       
       dispatch(actListMovieOnCinemaSuccess(result.data));
@@ -202,7 +202,7 @@ export const actSeachMovieApi=(name,history)=>{
       return (dispatch)=>{
           dispatch(actSearchMovieRequest());
           mainAPi
-          .get(`/QuanLyPhim/LayDanhSachPhim?maNhom=GP01&tenPhim=${name}`)
+          .get(`/QuanLyPhim/LayDanhSachPhim?maNhom=GP02&tenPhim=${name}`)
           .then((result)=>{
             dispatch(actSearchMovieSuccess(result.data))
            let data=result.data[0];

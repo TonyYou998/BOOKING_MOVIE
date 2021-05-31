@@ -8,6 +8,13 @@ import App from "./Components/app";
 import Footer from "./Components/footer";
 import TimeTable from "../../../components/TimeTable";
 import Search from "../HomePage/Components/search";
+import CountUp from "./Components/CountUp";
+import CountUpCompo from "./Components/CountUp";
+import Calendar from "./Components/Calendar";
+import AnimatedText from "./Components/Animated__Text";
+
+
+
 
 
 function HomePage(props) {
@@ -19,22 +26,14 @@ function HomePage(props) {
     const renderSearch=()=>{
         return <Search/>
     }
+
+   
+   
   const renderCarousel = () => {
 
     
-    let arrHinhAnh = [];
-    let arrMaPhim=[];
-    if (data && data.length > 0) {
-      
-      data.forEach((item, index) => {
-      
-        if (index === 18 || index === 19 || index === 20){
-          arrHinhAnh.push(item.hinhAnh);
-          arrMaPhim.push(item.maPhim);
-        } 
-      });
-    }
-    return <Carousel arrMovie={arrHinhAnh} arrCode={arrMaPhim} />;
+    
+    return <Carousel />;
   };
 
   const renderListMovieWrapper = () => {
@@ -56,16 +55,26 @@ function HomePage(props) {
   const renderTimeTable=()=>{
     return <TimeTable/>
   }
+  const renderCalendar=()=>{
+    return <Calendar/>
+  }
+  const renderCountUp=()=>{
+    return <CountUpCompo/>
+  }
+  
   
 
   return (
-    <div>
+    <div className="homepage__wrapper">
+     
       <div>{renderCarousel()}</div>
-      <div>{renderSearch()}</div>
-      
+      {/* <div>{renderSearch()}</div> */}
+      <div>{renderCountUp()}</div>  
+     
       <div>{renderListMovieWrapper()}</div>
-      {/* <div>{renderTimeTable()}</div> */}
-      <div>{renderNews()}</div>
+      <div className=" text-center animated__wrapper"><AnimatedText/></div>
+      {/* <div>{renderNews()}</div> */}
+        <div>{renderCalendar()}</div>
       <div>{renderApp()}</div>
       <div>{renderFooter()}</div>
     </div>

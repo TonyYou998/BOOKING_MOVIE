@@ -11,7 +11,7 @@ import {actChangeInfoApi, actDetailInfoApi} from "../../containers/AdminTemplate
 export default function EditInfo() {
   const [open, setOpen] = React.useState(false);
   let dispatch=useDispatch();
-  let info=JSON.parse(localStorage.getItem("user"));
+  let info=localStorage.getItem("user");
    
   useEffect(()=>{
       dispatch(actDetailInfoApi(info.taiKhoan))  ;

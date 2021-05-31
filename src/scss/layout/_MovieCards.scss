@@ -30,35 +30,38 @@
   border: none !important;
   cursor: pointer;
   margin: 0 auto;
-  width: 215px;
+  width: 250px;
 
-  &:hover .movie__button {
-    opacity: 1;
-    transition: all 0.7s;
-  }
-  &:hover .release__date,
-  &:hover .card-title {
-    transition: all 0.6s;
-    opacity: 0;
-  }
+  // &:hover .movie__button {
+  //   opacity: 1;
+  //   transition: all 0.7s;
+  // }
+  // &:hover .release__date,
+  // &:hover .card-title {
+  //   transition: all 0.6s;
+  //   opacity: 0;
+  // }
   &:hover .overlay,
   &:hover .icon {
     display: block;
+    
   }
+ 
 
   .card-img-top {
     position: relative;
-    height: 300px;
+    height: 350px;
     width: 100%;
   }
   .overlay {
     position: absolute;
     background: linear-gradient(to top, #000, transparent 60%);
-    top: 25px;
+    // top: 25px;
 
     width: 100%;
-    height: 300px;
+    height: 350px;
     display: none;
+    transition: all ease .3s !important;
   }
   .icon {
     &:hover {
@@ -88,5 +91,16 @@
     .release__date {
       width: 100% !important;
     }
+  }
+}
+.card-body{
+  background-color: #032055;
+ 
+  &:hover{
+       text-decoration: none;   
+  }
+
+  .card-title{
+    height: 50px;
   }
 }

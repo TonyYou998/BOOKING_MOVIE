@@ -1,0 +1,84 @@
+.calendar__wrapper{
+    background-color: #001232;
+    // background-image: url(http://pixner.net/boleto/demo/assets/images/ticket/ticket-bg01.jpg);
+    // background-size: cover;
+}
+.cinemaListMovie {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    // background-color: #01173f;
+    .list-group-item {
+        color: #fff;
+        // background-color: white !important;
+        background-color: #01173f;
+        // opacity: 0.6;
+    }
+    .list-group-item.active {
+        opacity: 1;
+           color: #fff !important;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        // background-color: white !important;
+        background-color: #31d7a9 !important;
+    }
+    height: 650px;
+    overflow: hidden;
+
+    .CumRap,
+    .item-DetaildPage {
+        height: 650px;
+        overflow: auto;
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 0.25rem;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            border-radius: 0.25rem;
+            background: #888;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    }
+    .LichChieuRap {
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        height: 650px;
+        overflow: auto;
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 0.25rem;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            border-radius: 0.25rem;
+            background: #888;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    }
+}
+.btn-time{
+    background: #162f5f !important;
+    color: white !important;
+    border-radius: 0 !important;
+    // mask-image: url(http://pixner.net/boleto/demo/assets/css/img/movie-seat.png) !important;
+    &:hover{
+        background: #31d7a9 !important;
+    }
+}
