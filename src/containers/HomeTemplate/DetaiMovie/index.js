@@ -11,7 +11,7 @@ import {actListMovieApi} from "../HomePage/modules/action";
 import {useSelector,useDispatch} from "react-redux";
 import { ListMovieRecommend } from "./Components/ListMovieRecommend";
 
-import TrailerModal from "../../../components/TrailerModal";
+
 import Footer from "../HomePage/Components/footer";
 import DetailMovieInfoRemake from "./Components/DetailMovie__infoRemake";
 import IntroMovie from "./Components/IntroMovie";
@@ -41,7 +41,7 @@ return <Loader/>
   
   
   const renderDetailMovieInfo = () => {
-    console.log(data);
+
     return <Info MovieData={data} />
   }
   const renderListMovie=()=>{
@@ -57,15 +57,15 @@ return <Loader/>
  }
  const renderDetailMovieInfoRemake=()=>{
 
-    // console.log(data);
+  
     return <DetailMovieInfoRemake MovieData={data} />
  }
   return (
     <div className="detail__wrapper">
 
-      {/* <div> {renderDetailMovieInfo()}</div> */}
+
       <div>{renderDetailMovieInfoRemake()} </div>
-     <div><IntroMovie data={data}/></div>
+      <div><IntroMovie data={data}/></div>
       <div className="detailMovie__listMovie ">{renderListMovie()}</div>
     
       
