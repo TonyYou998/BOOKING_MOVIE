@@ -3,7 +3,7 @@ import * as ActionType from "./constants";
 import {mainAPi} from "../../../../api";
 
 export const actLoginApi=(taiKhoan,matKhau,history)=>{
-        const TimeExp=300000;
+        const TimeExp=3600000;
     return (dispatch)=>{
 
         dispatch(actLoginRequest());
@@ -142,7 +142,7 @@ const actLoginFailed=(err)=>{
            
             
          
-                console.log(data);
+               
               
             return (dispatch)=>{
                 dispatch(actchangeInfoRequest());

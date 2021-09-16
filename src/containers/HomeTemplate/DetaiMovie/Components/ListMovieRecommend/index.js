@@ -20,8 +20,11 @@ export function ListMovieRecommend(props) {
     }
     }
     return (
-        <div className="container pt-4"  >
-             <h2 style={{color:"#fa5238"}}>Phim Hiện Chiếu</h2>
+        <div className="container pt-4 text-white"  >
+            
+             <div className="my-3 py-2 recommend__wrapper">
+                   <h2>Phim Hiện Chiếu</h2>
+             </div>
               <Slider {...settings}>
                {renderListMovie()}
               </Slider>

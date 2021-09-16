@@ -1,4 +1,9 @@
 .movie__wrapper {
+  background-color: #001232;
+  // background-image: url(http://pixner.net/boleto/demo/assets/images/ticket/ticket-bg01.jpg);
+width: 100%;
+padding-top: 50px;
+padding-bottom: 100px;
   .mobile{
      
     display: none;  
@@ -11,19 +16,25 @@
     border: 0;
     margin: 0 auto;
     .nav-link {
+      padding:15px 20px ;
       font-weight: 500;
-      font-size: 20px;
-      color: black;
-      &:hover {
-        font-size: 24px;
-        transition: all 0.4s;
-        border: 0;
-      }
+      // font-size: 20px;
+      color: white;
+      border-radius: 30px;
+      border:1px solid #11326f;
+      background-color: transparent;
+      // &:hover {
+      //   // font-size: 24px;
+      //   transition: all 0.4s;
+      //   border: 0;
+      // }
     }
     .active {
-      color: #fa5238 !important;
+      // color: #fa5238 !important;
       border: 0 !important;
-      font-size: 24px;
+       background: -webkit-linear-gradient(169deg,#5560ff 0%, #ff4343 100%);
+      color: white;
+      // font-size: 24px;
     }
   }
 }

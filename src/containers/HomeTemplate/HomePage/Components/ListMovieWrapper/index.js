@@ -13,19 +13,26 @@ export default function ListMovieWrapper(props) {
     }
   };
   var settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    rows: 2,
-    slidesToScroll: 4,
-    // draggable: false,
+  
+       dots: false,
+      infinite: true,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      // autoplay: true,
+      // speed: 0,
+      rows:1,
+      // autoplaySpeed: 0,
+      // cssEase: "linear"
   };
   return (
-    <div className="movie__wrapper  container" id="carlendar">
+    <div className="movie__wrapper " id="carlendar">
+      <div className="container">
+
+      
           {/* desktop */}
-          <ul className="nav nav-tabs desktop" id="myTab" role="tablist">
-        <li className="nav-item">
+         
+          <ul className="nav nav-tabs desktop pb-4" id="myTab" role="tablist">
+        <li className="nav-item px-1">
           <a
             className="nav-link active"
             id="home-tab"
@@ -38,7 +45,7 @@ export default function ListMovieWrapper(props) {
             Đang Chiếu
           </a>
         </li>
-        <li className="nav-item">
+        <li className="nav-item px-1">
           <a
             className="nav-link"
             id="profile-tab"
@@ -131,7 +138,7 @@ export default function ListMovieWrapper(props) {
       </div>
 
 
-
+    </div>
     </div>
 
 
