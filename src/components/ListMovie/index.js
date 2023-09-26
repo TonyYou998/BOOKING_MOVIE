@@ -4,7 +4,7 @@ import TrailerModal from "../TrailerModal";
 
 export default function ListMovie(props) {
   const { movie } = props;
-  // console.log(movie);
+
   return (
     <div className="card">
       <img className="card-img-top" src={movie.hinhAnh} alt="Card image cap" />

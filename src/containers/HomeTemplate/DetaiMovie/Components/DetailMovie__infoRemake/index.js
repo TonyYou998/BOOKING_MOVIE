@@ -1,6 +1,7 @@
 
 import React, { useEffect } from "react";
 import ShowTimeModal from "../DetailMovie__ShowTime";
+import convertYoutubeLink from "../../../../../helper/convert-youtube-link";
 export default function DetailMovieInfoRemake(props) {
    
        
@@ -11,7 +12,7 @@ export default function DetailMovieInfoRemake(props) {
     return (
         <header>
             <div className="video-container">
-                 <iframe  src={MovieData && MovieData.trailer}
+                 <iframe  src={MovieData && convertYoutubeLink(MovieData.trailer)}
                 frameborder="0" ></iframe>
 
             </div>

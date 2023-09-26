@@ -7,7 +7,7 @@ export default function LoginPage(props) {
     }
     return (
         <div>
-            <img style={{width:"100%",height:"100vh",position:"relative"}} src="https://tix.vn/app/assets/img/icons/bg2.jpg"/>
+            <img style={{width:"100%",height:"100vh",position:"relative"}} src="./img/bgAuth.jpg"/>
             <div>{renderLoginForm()}</div>
         </div>
     )

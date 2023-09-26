@@ -27,13 +27,13 @@ export default function App() {
                 <div className="mobile__case">
                   <div className="mobile__iphone">
                     <img
-                      src="https://tix.vn/app/assets/img/icons/mobile.png"
+                      src="./img/mobile.png"
                       alt="mobile"
                     />
                   </div>
                   <div className="mobile__slide">
                     <img
-                      src="https://tix.vn/app/assets/img/icons/slide/slide1.jpg"
+                      src="./img/slide1.jpg"
                       alt="slide1"
                     />
                   </div>

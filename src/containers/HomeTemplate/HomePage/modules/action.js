@@ -7,7 +7,7 @@ export const actListMovieApi = () => {
     dispatch(actListMovieRequest());
 
     mainAPi
-      .get("/QuanLyPhim/LayDanhSachPhim?maNhom=GP02")
+      .get("/QuanLyPhim/LayDanhSachPhim?maNhom=GP09")
       .then((result) => {
         dispatch(actListMovieSuccess(result.data));
       })

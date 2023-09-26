@@ -55,20 +55,25 @@ export default function LoginForm(props) {
         if(localStorage.getItem("user"))
         return <Redirect to ="/dashboard"/>
     return (
-        <div className="form__wrapper">
+        <div className="form__wrapper text-light">
             <div className="tittle px-5">
-                <img src="https://tix.vn/app/assets/img/login/group@2x.png"/>
+                <img src="./img/login.png"  />
                 <p>Đăng nhập để được nhiều ưu đãi, mua vé
                     và bảo mật thông tin!
                 </p>
             </div>
             <div className="form"  onSubmit={
                  handleLogin }>
-                <p>Username</p>
+                <div className="form-group">
+                <label>Tài khoản</label>
                 <input type="text" name="taiKhoan" className="input" onChange={handleOnChangeTaiKhoan}></input>
-                <p>Password</p>
+                </div>
+                <div className="form-group">
+                <label>Mật khẩu</label>
                 <input type="password" name="matKhau" className="input" onChange={handleOnChangeMatKhau}></input>
 
+                </div>
+              
                 <form className="logNreg mt-3">
                     <button type="submit" className="btn btn-success button mr-2">Đăng Nhập</button>
                      <Link to={"/register"} className="btn btn-primary" >

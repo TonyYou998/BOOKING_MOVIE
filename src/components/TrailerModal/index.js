@@ -8,6 +8,7 @@ import MuiDialogActions from '@material-ui/core/DialogActions';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import Typography from '@material-ui/core/Typography';
+import convertYoutubeLink from '../../helper/convert-youtube-link';
 
 const styles = (theme) => ({
   root: {
@@ -52,21 +53,21 @@ const DialogActions = withStyles((theme) => ({
 export default function TrailerModal(props) {
   const [open, setOpen] = React.useState(false);
   const {movie}=props;
- 
+  
   const handleClickOpen = () => {
     setOpen(true);
   };
   const handleClose = () => {
     setOpen(false);
   };
-
+ 
   return (
     <Fragment>
       <i style={{zIndex:"100"}} className="fa fa-play icon" onClick={handleClickOpen} />
       <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
-        
+       
         <DialogContent dividers>
-         <iframe width="560" height="315" src={movie && movie.trailer} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+         <iframe width="560" height="315" src={movie && convertYoutubeLink(movie.trailer)} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </DialogContent>
         <DialogActions>
           

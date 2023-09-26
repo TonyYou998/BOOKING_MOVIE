@@ -30,6 +30,7 @@
 	}
 	.header__nav {
 		text-align: center;
+		margin: 0 auto;
 		ul {
 			list-style: none;
 			padding-top: 15px;
@@ -59,24 +60,10 @@
 					color: #9b9b9b;
 					margin-right: 5px;
 				}
-				margin-right: 10px;
+				// margin-right: 10px;
 				padding-right: 10px;
 			}
-			.dropdown {
-				img {
-					width: 15px;
-				}
-				.dropdown-menu.show {
-					a {
-						display: block;
-					}
-					top: 10px !important;
-					left: -20px !important;
-					.dropdown-item {
-						padding-left: 10px;
-					}
-				}
-			}
+		
 		}
 	}
 }
@@ -88,7 +75,7 @@
 .transition{
 	transition: all .3s ease-in-out;
 }
-.nav-pills .nav-link.active,
+.nav-pills .nav-link .active,
 .nav-pills .show > .nav-link {
 	background-color: transparent !important;
 }

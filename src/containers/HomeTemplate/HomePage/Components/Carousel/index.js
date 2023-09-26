@@ -9,7 +9,7 @@ export default function Carousel(props) {
 
   return (
      <div className="banner__wrapper">
-       <div className="banner__content ">
+       <div className="banner__content " >
 
               <h1 className="text-center text-white " >Interested in</h1>
                 <Typical className="text-center  text-animation"

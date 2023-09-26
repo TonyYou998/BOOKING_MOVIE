@@ -19,11 +19,17 @@ const AnimatedText = () => {
     return () => clearInterval(action);
   }, []);
 
-  return <div className=" animated__text container d-flex">
-      <h1>{result}</h1>
-  </div>;
+  return (
+    <div className=" animated__text container d-flex">
+      <div className="animated__text--wrapper">
+        
+        <div className="animated__text--content">
+          <h1>{result}</h1>
+          <h1>Subcribe to get exclusive discount</h1>
+        </div>
+      </div>
+    </div>
+  );
 };
-
-
 
 export default AnimatedText;

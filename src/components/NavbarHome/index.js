@@ -33,7 +33,7 @@ export default function NavbarHome() {
     <div>
       <header className="header transition">
         <div className="row">
-          <div className="col-xl-2 col-lg-2 col-md-2 col-1">
+          <div className="col-xl-3 col-lg-2 col-md-2 col-1">
             <div className="header__logo">
               <Link to="/" className="d-flex  align-items-center">
                 <img
@@ -46,7 +46,7 @@ export default function NavbarHome() {
             </div>
               
           </div>
-          <div className="col-xl-7 col-lg-9 col-md-9 middleLi ">
+          <div className="col-xl-6 col-lg-9 col-md-9 middleLi ">
             <nav className="header__nav">
               <ul>
                 <li>
@@ -58,53 +58,25 @@ export default function NavbarHome() {
               </ul>
             </nav>
           </div>
-          <div className="col-xl-3  login pl-0">
+          <div className="col-xl-3  login pl-0" >
             <div className="header__login">
               <ul className="nav justify-content-end nav-pills">
-                <li className="nav-item border-right" >
-                  <img
+                <li className="nav-item " >
+                  {/* <img
                     src="https://tix.vn/app/assets/img/avatar.png"
                     alt="avatar"
-                  />
+                  /> */}
                   <Link to={"/login"} className="nav-link " >
                     {showName()}
                   </Link>
 
                 </li>
-                <li className="nav-item dropdown">
-                  <img
-                    src="https://tix.vn/app/assets/img/icons/location-header.png"
-                    alt="location-header"
-                  />
-                  <a
-                    className="nav-link dropdown-toggle"
-                    data-toggle="dropdown"
-                    href="#"
-                    role="button"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
-                    Hồ Chí Minh
-                  </a>
-                  <div className="dropdown-menu">
-                    <a className="dropdown-item" href="#">
-                      Hà Nội
-                    </a>
-                    <a className="dropdown-item" href="#">
-                      Đà Nẵng
-                    </a>
-                    <a className="dropdown-item" href="#">
-                      Campuchia
-                    </a>
-                  </div>
-                </li>
+              
               </ul>
          
             </div>
           </div>
-          <div className="dropdown__button col-lg-1 col-sm-2 col-2">
-              <img src="https://tix.vn/app/assets/img/icons/menu-options.png"/>
-          </div>
+        
         </div>
       </header>
       

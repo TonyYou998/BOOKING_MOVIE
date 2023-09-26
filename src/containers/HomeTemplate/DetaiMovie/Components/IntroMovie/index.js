@@ -10,7 +10,7 @@ function IntroMovie(props) {
         <div className="summery__wrapper ">
             <div className="container">
                 <div className="summery__tittle mt-5 py-2">
-                    <h2>Summery</h2>
+                    <h2>Summary</h2>
                    
                 </div>
                     <div className="text-white pt-3">

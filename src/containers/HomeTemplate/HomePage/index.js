@@ -69,7 +69,7 @@ function HomePage(props) {
      
       <div>{renderCarousel()}</div>
       {/* <div>{renderSearch()}</div> */}
-      <div>{renderCountUp()}</div>  
+      {/* <div>{renderCountUp()}</div>   */}
      
       <div>{renderListMovieWrapper()}</div>
       <div className=" text-center animated__wrapper"><AnimatedText/></div>
